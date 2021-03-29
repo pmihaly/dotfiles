@@ -1,0 +1,94 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+. "${HOME}/.cache/wal/colors.sh"
+
+
+# sudo not required for some system commands
+for x in mount umount sv pacman updatedb su ; do
+	alias $x="sudo $x"
+done
+
+alias sudo="doas"
+alias dfs="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+  cp="cp -iv" \
+  mv="mv -iv" \
+  rm="rm -vI" \
+  bc="bc -ql" \
+  mkd="mkdir -pv" \
+  yt="ytfzf -lt" \
+  mpv="mpv --fs"
+
+DMENU_COLORS="-nb \"$color0\" -nf \"$color15\" -sb \"$color2\" -sf \"$color15\""
+DISPLAY_WIDTH="$(expr $(xrandr | grep "*" | grep -oP "[0-9]+(?=x)") - 20)"
+DMENU_SIZE="-x 10 -y 10 -z $DISPLAY_WIDTH -h 20"
+alias \
+  dmenu_run_pretty="dmenu_run $DMENU_COLORS $DMENU_SIZE" \
+  dmenu="dmenu $DMENU_COLORS $DMENU_SIZE"
+
+# Colorize commands when possible.
+alias \
+  ls="ls -hN --color=auto --group-directories-first" \
+  grep="grep --color=auto" \
+  diff="diff --color=auto" \
+  ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+  ka="killall" \
+  sdn="sudo shutdown -h now" \
+  e="$EDITOR" \
+  v="$EDITOR" \
+  p="sudo pacman" \
+  z="zathura" \
+  r="ranger"
+
+alias \
+  p="sudo pacman" \
+  a="paru"
+
+alias \
+  cst="cd ~/.config/st" \
+  cdwm="cd ~/.config/dwm" \
+  cslock="cd ~/.config/slock" \
+  cdmenu="cd ~/.config/dmenu" \
+  cslstatus="cd ~/.config/slstatus"
+
+
+alias \
+  cv="$EDITOR ~/.config/nvim/init.vim" \
+  cb="$EDITOR ~/.bashrc" \
+  cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
+  cx="$EDITOR ~/.xinitrc" \
+  ca="$EDITOR ~/.config/aliasrc"
+
+alias \
+  g="git" \
+  gs="git status" \
+  ga="git add" \
+  gc="git commit" \
+  gac="git add -A && git commit" \
+  gr="git restore" \
+  gra="git restore ." \
+  gd="git diff" \
+  gp="git push"
+
+alias \
+  ns="npm start" \
+  nd="npm dev" \
+  ni="npm install"
+
+alias cal="cal 2021"
+
+alias \
+  mc="make clean" \
+  smci="sudo make clean install" \
+  gma="gcc main.c && ./a.out"
