@@ -1,0 +1,26 @@
+super + w
+    brave
+
+super + x
+    slock
+
+super + shift + x
+    poweroff
+
+super + a
+    st -e pulsemixer
+
+super + o
+    zathura ~/sync/orarend.pdf
+
+super + r
+    st -e ranger
+
+super + c
+    st -e python -ic ""
+
+super + e
+    st -e neomutt
+
+F11
+    scrot
