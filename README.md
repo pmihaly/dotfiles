@@ -11,9 +11,10 @@
 
 ## Installation
 
-1. Remove `.bashrc` and `.bash_profile`
+1. `rm .bashrc .bash_profile`
 2. `git clone --bare https://github.com/pmihaly/dotfiles $HOME/.dotfiles`
 3. `git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout`
+4. `paru -S --needed - < .config/pkgs`
 
 ## Usage
 
