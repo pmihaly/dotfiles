@@ -21,6 +21,12 @@ dfs () {
   [ $# -eq 0 ] && dotfiles status || dotfiles $@
 }
 
+alias dfsa="dotfiles add"
+alias dfsc="dotfiles commit"
+alias dfsac="dotfiles add && dotfiles commit"
+alias dfsp="dotfiles push"
+alias dfspl="dotfiles pull"
+
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
   cp="cp -iv" \
