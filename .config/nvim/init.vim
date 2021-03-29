@@ -110,6 +110,12 @@ let g:airline_theme='nord'
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 
+	map <leader>wh <C-w>h
+	map <leader>wj <C-w>j
+	map <leader>wk <C-w>k
+	map <leader>wl <C-w>l
+
+
 " Replace ex mode with gq
 	map Q gq
 
