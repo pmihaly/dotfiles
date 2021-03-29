@@ -10,11 +10,7 @@ highlight
 htop
 httpie
 keepassxc
-msr-tools
-mutt-wizard-git
-networkmanager
 opendoas
-p7zip
 patch
 pfetch
 python-pip
@@ -27,8 +23,6 @@ tmux
 ttf-fira-code
 ttf-mononoki
 ueberzug
-unrar
-unzip
 wxgtk-common
 xcape
 xclip
