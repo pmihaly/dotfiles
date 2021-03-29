@@ -72,7 +72,8 @@ alias \
   cb="$EDITOR ~/.bashrc" \
   cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
   cx="$EDITOR ~/.xinitrc" \
-  ca="$EDITOR ~/.config/aliasrc"
+  ca="$EDITOR ~/.config/aliasrc" \
+  cpk="$EDITOR ~/.config/pkgs"
 
 alias \
   g="git" \
