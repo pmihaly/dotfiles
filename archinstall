@@ -6,6 +6,7 @@ devour
 ffmpegthumbnailer
 fzf
 gcc
+highlight
 htop
 httpie
 keepassxc
@@ -19,6 +20,7 @@ pfetch
 python-pip
 ranger
 scrot
+sxhkd
 sxiv
 syncthing
 tmux
@@ -33,4 +35,3 @@ xclip
 xwallpaper
 youtube-dl
 ytfzf-git
-sxhkd
