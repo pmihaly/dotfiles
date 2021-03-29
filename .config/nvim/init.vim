@@ -63,6 +63,9 @@ let g:airline_theme='nord'
 " fzf
 	map <leader><space> :Files<CR>
 
+" ~%.config/pkgs
+	autocmd BufWritePre ~/.config/pkgs sort
+
 " Window navigation
 	map <leader>q :q!<CR>
 	map <leader>wq :wq<CR>
