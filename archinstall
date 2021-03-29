@@ -9,9 +9,6 @@ gcc
 htop
 httpie
 keepassxc
-linux
-make
-mkinitcpio
 msr-tools
 mutt-wizard-git
 networkmanager
@@ -36,4 +33,3 @@ xclip
 xwallpaper
 youtube-dl
 ytfzf-git
-zip
