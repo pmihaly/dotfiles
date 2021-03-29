@@ -1,6 +1,6 @@
 . "${HOME}/.cache/wal/colors.sh"
 
-DISPLAY_WIDTH="$(expr $(xrandr | grep -oP "[0-9]+(?=x.*\*)") - 20)"
+DISPLAY_WIDTH="$(expr $(xrandr | grep -oP -m 1 "[0-9]+(?=x.*\*)") - 20)"
 DMENU_SIZE="-x 10 -y 10 -z $DISPLAY_WIDTH -h 20"
 
 dmenu -nb "$color0" -nf "$color15" -sb "$color2" -sf "$color15" $DMENU_SIZE
