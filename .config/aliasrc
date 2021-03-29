@@ -15,7 +15,11 @@ for x in mount umount sv pacman updatedb su ; do
 done
 
 alias sudo="doas"
-alias dfs="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+dfs () {
+  [ $# -eq 0 ] && dotfiles status || dotfiles $@
+}
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
