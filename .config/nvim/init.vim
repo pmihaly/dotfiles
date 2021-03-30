@@ -22,6 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'dhruvasagar/vim-table-mode'
@@ -76,6 +77,7 @@ vmap > >gv
 " Window navigation
 	map <leader>q :q!<CR>
 	map <leader>wq :wq<CR>
+	map <leader>we :wq<CR>
 	map <leader>ww :w<CR>
 	map <leader>wv :vs<CR>
 
