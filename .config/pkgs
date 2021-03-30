@@ -10,7 +10,9 @@ highlight
 htop
 httpie
 keepassxc
+mutt-wizard
 opendoas
+pam-gnupg
 patch
 pfetch
 python-pip
@@ -25,6 +27,8 @@ ttf-mononoki
 ueberzug
 unclutter
 unclutter
+urlview
+w3m
 wxgtk-common
 xcape
 xclip
