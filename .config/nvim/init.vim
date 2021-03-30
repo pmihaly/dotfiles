@@ -29,29 +29,30 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
-set title
-set bg=light
-set go=a
-set mouse=a
-set nohlsearch
-set clipboard+=unnamedplus
-set noshowmode
-set noruler
-set laststatus=0
-set noshowcmd
-set autochdir
+" Super basic settings
+    set title
+    set bg=light
+    set go=a
+    set mouse=a
+    set nohlsearch
+    set clipboard+=unnamedplus
+    set noshowmode
+    set noruler
+    set laststatus=0
+    set noshowcmd
+    set autochdir
 
-colorscheme nord
-let g:airline_theme='nord'
+    colorscheme nord
+    let g:airline_theme='nord'
 
-set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
-set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
-set t_Co=256                         " Enable 256 colors
-set termguicolors                    " Enable GUI colors for the terminal to get truecolor
+    set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
+    set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
+    set t_Co=256                         " Enable 256 colors
+    set termguicolors                    " Enable GUI colors for the terminal to get truecolor
 
 " Don't exit visual mode when indenting with > and <
-vmap < <gv
-vmap > >gv
+    vmap < <gv
+    vmap > >gv
 
 " Some basics:
 	nnoremap c "_c
@@ -72,6 +73,13 @@ vmap > >gv
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
+" Managing tabs
+	set tabstop=4
+	set softtabstop=4
+	set shiftwidth=4
+	set expandtab
+	set autoindent
+	set fileformat=unix
 
 " fzf
 	map <leader><space> :Files<CR>
