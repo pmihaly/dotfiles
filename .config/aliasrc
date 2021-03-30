@@ -60,7 +60,7 @@ alias \
   v="$EDITOR" \
   p="sudo pacman" \
   z="zathura" \
-  r="ranger"
+  r="$FILEBROWSER"
 
 alias \
   p="sudo pacman" \
