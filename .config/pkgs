@@ -1,6 +1,8 @@
 arandr
+atool
 bashtop
 brave-bin
+chafa
 cmake
 devour
 ffmpegthumbnailer
@@ -10,8 +12,8 @@ highlight
 htop
 httpie
 keepassxc
+lf
 mutt-wizard
-nnn
 opendoas
 pam-gnupg
 patch
@@ -28,6 +30,7 @@ ttf-mononoki
 ueberzug
 unclutter
 urlview
+w3m
 w3m
 wxgtk-common
 xcape

@@ -80,6 +80,7 @@ alias \
   cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
   cx="$EDITOR ~/.xinitrc" \
   ca="$EDITOR ~/.config/aliasrc" \
+  cl="$EDITOR ~/.config/lf/lfrc" \
   cpk="$EDITOR ~/.config/pkgs"
 
 alias \

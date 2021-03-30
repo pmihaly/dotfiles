@@ -14,7 +14,7 @@ super + o
     zathura ~/sync/orarend.pdf
 
 super + r
-    st -e nnn
+    st -e lf
 
 super + c
     st -e python -ic ""
