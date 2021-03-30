@@ -40,6 +40,10 @@ set autochdir
 colorscheme nord
 let g:airline_theme='nord'
 
+" Don't exit visual mode when indenting with > and <
+vmap < <gv
+vmap > >gv
+
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
