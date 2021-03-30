@@ -35,6 +35,7 @@ alias \
   bc="bc -ql" \
   mkd="mkdir -pv" \
   yt="ytfzf -lt" \
+  yts="yt -S" \
   mpv="mpv --fs"
 
 # DMENU_COLORS="-nb \"$color0\" -nf \"$color15\" -sb \"$color2\" -sf \"$color15\""
