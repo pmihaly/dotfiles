@@ -11,7 +11,7 @@ shopt -u -o history &
 eval "$(ssh-agent -s)" &
 unclutter 3 &
 keepassxc &
-redshift -l 47.29:19.2 &
+redshift &
 
 (sleep 1 && xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape') &
 
