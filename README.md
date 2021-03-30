@@ -14,7 +14,8 @@
 1. `rm .bashrc .bash_profile`
 2. `git clone --bare https://github.com/pmihaly/dotfiles $HOME/.dotfiles`
 3. `git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout`
-4. `paru -S --needed - < .config/pkgs`
+4. `source .bashrc && dotfiles config --local status.showUntrackedFiles no`
+5. `paru -S --needed - < .config/pkgs`
 
 ## Usage
 
