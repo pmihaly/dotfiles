@@ -44,9 +44,18 @@ set autochdir
 colorscheme nord
 let g:airline_theme='nord'
 
+set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
+set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
+set t_Co=256                         " Enable 256 colors
+set termguicolors                    " Enable GUI colors for the terminal to get truecolor
+
 " Don't exit visual mode when indenting with > and <
 vmap < <gv
 vmap > >gv
+
+" Indent anywhere in line
+imap <Tab> <c-d>
+imap <S-Tab> <c-t>
 
 " Some basics:
 	nnoremap c "_c
@@ -71,6 +80,9 @@ vmap > >gv
 " fzf
 	map <leader><space> :Files<CR>
 
+" vimwiki
+	let g:vimwiki_list = [{'path': '~/sync/vimwiki/', 'auto_diary_index': 1}]
+
 " ~%.config/pkgs
 	autocmd BufWritePre ~/.config/pkgs sort
 
@@ -78,7 +90,7 @@ vmap > >gv
 	map <leader>q :q!<CR>
 	map <leader>wq :wq<CR>
 	map <leader>we :wq<CR>
-	map <leader>ww :w<CR>
+	map <leader>wr :w<CR>
 	map <leader>wv :vs<CR>
 
 " Tab navigation
