@@ -53,10 +53,6 @@ set termguicolors                    " Enable GUI colors for the terminal to get
 vmap < <gv
 vmap > >gv
 
-" Indent anywhere in line
-imap <Tab> <c-d>
-imap <S-Tab> <c-t>
-
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
@@ -81,7 +77,8 @@ imap <S-Tab> <c-t>
 	map <leader><space> :Files<CR>
 
 " vimwiki
-	let g:vimwiki_list = [{'path': '~/sync/vimwiki/', 'auto_diary_index': 1}]
+	let g:vimwiki_global_ext = 0
+	let g:vimwiki_list = [{'path': '~/sync/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]
 
 " ~%.config/pkgs
 	autocmd BufWritePre ~/.config/pkgs sort
