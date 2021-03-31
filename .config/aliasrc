@@ -63,11 +63,13 @@ alias \
     v="$EDITOR" \
     p="sudo pacman" \
     z="zathura" \
-    r="$FILEBROWSER"
-
-alias \
+    r="$FILEBROWSER" \
+    rs="ka sxhkd ; sxhkd" \
     p="sudo pacman" \
-    a="paru"
+    a="paru" \
+    mc="make clean" \
+    smci="sudo make clean install" \
+    gma="gcc main.c && ./a.out"
 
 alias \
     cst="cd ~/.config/st" \
@@ -104,8 +106,3 @@ alias \
     ni="npm install"
 
 alias cal="cal 2021"
-
-alias \
-    mc="make clean" \
-    smci="sudo make clean install" \
-    gma="gcc main.c && ./a.out"
