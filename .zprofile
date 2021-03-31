@@ -14,7 +14,7 @@ export TERMINAL='/usr/local/bin/st'
 [ -f "~/.cache/wal/colors-tty.sh" ] && . "~/.cache/wal/colors-tty.sh"
 
 export TERM=st-256color
-export YTFZF_CONFIG_DIR='${XDG_CONFIG_HOME:-$HOME/.config}/ytfzf'
+export YTFZF_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ytfzf"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
