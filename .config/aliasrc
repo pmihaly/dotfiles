@@ -83,6 +83,7 @@ alias \
     cv="$EDITOR ~/.config/nvim/init.vim" \
     cb="$EDITOR ~/.bashrc" \
     cz="$EDITOR ~/.config/zsh/.zshrc" \
+    czp="$EDITOR ~/.zprofile" \
     cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
     cx="$EDITOR ~/.xinitrc" \
     ca="$EDITOR ~/.config/aliasrc" \
