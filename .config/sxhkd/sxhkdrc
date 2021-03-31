@@ -14,7 +14,7 @@ super + o
     zathura ~/sync/orarend.pdf
 
 super + r
-    $TERMINAL $FILEBROWSER
+    $TERMINAL -e $SHELL -ic $FILEBROWSER
 
 super + c
     $TERMINAL -e python -ic ""
@@ -26,7 +26,7 @@ F11
     scrot
 
 super + y
-    $TERMINAL -e bash -ic 'yt -s'
+    $TERMINAL -e $SHELL -ic 'yt -s'
 
 super + v
     $TERMINAL -e nvim -c VimwikiIndex
