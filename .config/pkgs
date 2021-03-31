@@ -14,10 +14,14 @@ httpie
 keepassxc
 lf
 mutt-wizard
+nodejs
+nodejs-neovim
+npm
 opendoas
 patch
 pfetch
 python-pip
+python-pynvim
 ranger
 redshift
 scrot
