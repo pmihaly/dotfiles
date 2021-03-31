@@ -9,6 +9,7 @@ export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
 export BROWSER='/usr/bin/brave'
 export FILEBROWSER='/usr/bin/lf'
+export TERMINAL='/usr/local/bin/st'
 export TERM=st-256color
 
 export PATH=~/.local/bin:$PATH

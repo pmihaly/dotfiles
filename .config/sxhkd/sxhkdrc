@@ -8,22 +8,25 @@ super + shift + x
     poweroff
 
 super + a
-    st -e pulsemixer
+    $TERMINAL -e pulsemixer
 
 super + o
     zathura ~/sync/orarend.pdf
 
 super + r
-    st -e bash -ic '$FILEBROWSER'
+    $TERMINAL $FILEBROWSER
 
 super + c
-    st -e python -ic ""
+    $TERMINAL -e python -ic ""
 
 super + e
-    st -e neomutt
+    $TERMINAL -e neomutt
 
 F11
     scrot
 
 super + y
-    st -e bash -ic 'yt -s'
+    $TERMINAL -e bash -ic 'yt -s'
+
+super + v
+    $TERMINAL -e nvim -c VimwikiIndex
