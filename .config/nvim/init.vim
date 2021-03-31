@@ -70,7 +70,7 @@ call plug#end()
 " Perform dot commands over visual blocks:
 	vnoremap . :normal .<CR>
 " Goyo plugin makes text more readable when writing prose:
-	map <leader>g :Goyo \| set linebreak<CR>
+	map <silent> <leader>g :Goyo \| set linebreak<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
@@ -187,7 +187,8 @@ endif
 " Custom
 map <A-a> :CocAction<CR>
 map <A-c> :CocCommand<CR>
-map <A-p> :CocCommand python.execInTerminal<CR>
+map <silent> <A-f> :CocCommand explorer<CR>
+map <A-p> :w \| CocCommand python.execInTerminal<CR>
 
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -206,7 +207,6 @@ let g:coc_global_extensions = [
   \ 'coc-marketplace'
 	\ ]
 
-noremap <silent> <A-f> :CocCommand explorer<CR>
 
 " From Coc Readme
 set updatetime=300
