@@ -15,7 +15,6 @@ keepassxc
 lf
 mutt-wizard
 opendoas
-pam-gnupg
 patch
 pfetch
 python-pip
@@ -41,3 +40,5 @@ youtube-dl
 ytfzf-git
 zathura
 zathura-pdf-mupdf
+zsh
+zsh-fast-syntax-highlighting
