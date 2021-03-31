@@ -14,7 +14,7 @@ super + o
     zathura ~/sync/orarend.pdf
 
 super + r
-    st -e lf
+    st -e bash -ic '$FILEBROWSER'
 
 super + c
     st -e python -ic ""
@@ -24,3 +24,6 @@ super + e
 
 F11
     scrot
+
+super + y
+    st -e bash -ic 'yt -s'
