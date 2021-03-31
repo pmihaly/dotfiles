@@ -90,6 +90,10 @@ call plug#end()
 	let g:vimwiki_global_ext = 0
 	let g:vimwiki_list = [{'path': '~/sync/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]
 
+" emmet
+    let g:user_emmet_mode='n'
+    let g:user_emmet_leader_key=','
+
 " ~%.config/pkgs
 	autocmd BufWritePre ~/.config/pkgs sort
 
