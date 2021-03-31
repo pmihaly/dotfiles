@@ -18,91 +18,94 @@ alias sudo="doas"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 dfs () {
-  [ $# -eq 0 ] && dotfiles status || dotfiles $@
+    [ $# -eq 0 ] && dotfiles status || dotfiles $@
 }
 
-alias dfsa="dotfiles add"
-alias dfsc="dotfiles commit"
-alias dfsac="dotfiles add && dotfiles commit"
-alias dfsp="dotfiles push"
-alias dfspl="dotfiles pull"
+alias \
+  dfsa="dotfiles add" \
+  dfsc="dotfiles commit" \
+  dfsac="dotfiles add && dotfiles commit" \
+  dfsp="dotfiles push" \
+  dfspl="dotfiles pull" \
+  dfsd="dotfiles diff" \
+  dfsr="dotfiles restore"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
-  cp="cp -iv" \
-  mv="mv -iv" \
-  rm="rm -vI" \
-  bc="bc -ql" \
-  mkd="mkdir -pv" \
-  yt="ytfzf -lt" \
-  yts="yt -S" \
-  mpv="mpv --fs"
+    cp="cp -iv" \
+    mv="mv -iv" \
+    rm="rm -vI" \
+    bc="bc -ql" \
+    mkd="mkdir -pv" \
+    yt="ytfzf -lt" \
+    yts="yt -S" \
+    mpv="mpv --fs"
 
 # DMENU_COLORS="-nb \"$color0\" -nf \"$color15\" -sb \"$color2\" -sf \"$color15\""
 # DISPLAY_WIDTH="$(expr $(xrandr | grep "*" | grep -oP "[0-9]+(?=x)") - 20)"
 # DMENU_SIZE="-x 10 -y 10 -z $DISPLAY_WIDTH -h 20"
 # alias \
-#   dmenu_run_pretty="dmenu_run $DMENU_COLORS $DMENU_SIZE" \
-#   dmenu="dmenu $DMENU_COLORS $DMENU_SIZE"
+#     dmenu_run_pretty="dmenu_run $DMENU_COLORS $DMENU_SIZE" \
+#     dmenu="dmenu $DMENU_COLORS $DMENU_SIZE"
 
 # Colorize commands when possible.
 alias \
-  ls="ls -hN --color=auto --group-directories-first" \
-  grep="grep --color=auto" \
-  diff="diff --color=auto" \
-  ccat="highlight --out-format=ansi"
+    ls="ls -hN --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    ccat="highlight --out-format=ansi"
 
 # These common commands are just too long! Abbreviate them.
 alias \
-  ka="killall" \
-  sdn="sudo shutdown -h now" \
-  e="$EDITOR" \
-  v="$EDITOR" \
-  p="sudo pacman" \
-  z="zathura" \
-  r="$FILEBROWSER"
+    ka="killall" \
+    sdn="sudo shutdown -h now" \
+    e="$EDITOR" \
+    v="$EDITOR" \
+    p="sudo pacman" \
+    z="zathura" \
+    r="$FILEBROWSER"
 
 alias \
-  p="sudo pacman" \
-  a="paru"
+    p="sudo pacman" \
+    a="paru"
 
 alias \
-  cst="cd ~/.config/st" \
-  cdwm="cd ~/.config/dwm" \
-  cslock="cd ~/.config/slock" \
-  cdmenu="cd ~/.config/dmenu" \
-  cslstatus="cd ~/.config/slstatus"
+    cst="cd ~/.config/st" \
+    cdwm="cd ~/.config/dwm" \
+    cslock="cd ~/.config/slock" \
+    cdmenu="cd ~/.config/dmenu" \
+    cslstatus="cd ~/.config/slstatus"
 
 
 alias \
-  cv="$EDITOR ~/.config/nvim/init.vim" \
-  cb="$EDITOR ~/.bashrc" \
-  cz="$EDITOR ~/.config/zsh/.zshrc" \
-  cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
-  cx="$EDITOR ~/.xinitrc" \
-  ca="$EDITOR ~/.config/aliasrc" \
-  cl="$EDITOR ~/.config/lf/lfrc" \
-  cpk="$EDITOR ~/.config/pkgs"
+    cv="$EDITOR ~/.config/nvim/init.vim" \
+    cb="$EDITOR ~/.bashrc" \
+    cz="$EDITOR ~/.config/zsh/.zshrc" \
+    cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
+    cx="$EDITOR ~/.xinitrc" \
+    ca="$EDITOR ~/.config/aliasrc" \
+    cl="$EDITOR ~/.config/lf/lfrc" \
+    cpk="$EDITOR ~/.config/pkgs"
 
 alias \
-  g="git" \
-  gs="git status" \
-  ga="git add" \
-  gc="git commit" \
-  gac="git add -A && git commit" \
-  gr="git restore" \
-  gra="git restore ." \
-  gd="git diff" \
-  gp="git push"
+    g="git" \
+    gs="git status" \
+    ga="git add" \
+    gc="git commit" \
+    gac="git add -A && git commit" \
+    gr="git restore" \
+    gra="git restore ." \
+    gd="git diff" \
+    gp="git push"
 
 alias \
-  ns="npm start" \
-  nd="npm dev" \
-  ni="npm install"
+    ns="npm start" \
+    nd="npm dev" \
+    ni="npm install"
 
 alias cal="cal 2021"
 
 alias \
-  mc="make clean" \
-  smci="sudo make clean install" \
-  gma="gcc main.c && ./a.out"
+    mc="make clean" \
+    smci="sudo make clean install" \
+    gma="gcc main.c && ./a.out"
