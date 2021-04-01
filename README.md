@@ -11,11 +11,14 @@
 
 ## Installation
 
-1. `rm .bashrc .bash_profile`
-2. `git clone --bare https://github.com/pmihaly/dotfiles $HOME/.dotfiles`
-3. `git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout`
-4. `source .bashrc && dotfiles config --local status.showUntrackedFiles no`
-5. `paru -S --needed - < .config/pkgs`
+**REPLACE <USER HERE> WITH YOUR USERNAME**
+1. `sudo pacman -S opendoas && su root -c 'echo "permit persist keepenv <USER HERE> as root" > /etc/doas.conf' && sudo pacman -Rns sudo`
+2. `sudo pacman -S zsh && sudo chsh $USER && sudo pacman -Rns bash`
+3. `rm .bash*`
+4. `git clone --bare https://github.com/pmihaly/dotfiles $HOME/.dotfiles`
+5. `git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout`
+6. `source .zshrc && dotfiles config --local status.showUntrackedFiles no`
+7. `paru -S --needed - < .config/pkgs`
 
 ## Usage
 
