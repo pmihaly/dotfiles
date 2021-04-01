@@ -30,3 +30,6 @@ super + y
 
 super + v
     $TERMINAL -e nvim -c VimwikiIndex
+
+super + i
+    dmenuunicode

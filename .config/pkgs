@@ -13,6 +13,7 @@ htop
 httpie
 keepassxc
 lf-bin
+libxft-bgra
 mutt-wizard
 nodejs
 nodejs-neovim
@@ -30,6 +31,7 @@ sxiv
 syncthing
 tmux
 ttf-fira-code
+ttf-joypixels
 ttf-mononoki
 ueberzug
 unclutter
