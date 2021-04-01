@@ -192,6 +192,7 @@ map <A-a> :CocAction<CR>
 map <A-c> :CocCommand<CR>
 map <silent> <A-f> :CocCommand explorer<CR>
 map <A-p> :w \| CocCommand python.execInTerminal<CR>
+map <A-l> :CocList<CR>
 
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -305,3 +306,9 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+
+" SHOULD BE LAST
+set noshowmode  " to get rid of thing like --INSERT--
+set noshowcmd  " to get rid of display of last command
+set shortmess+=F  " to get rid of the file name displayed in the command line bar
