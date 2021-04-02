@@ -18,7 +18,14 @@
 4. `git clone --bare https://github.com/pmihaly/dotfiles $HOME/.dotfiles`
 5. `git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout`
 6. `source .zshrc && dotfiles config --local status.showUntrackedFiles no`
-7. `paru -S --needed - < .config/pkgs`
+7. `paru -S --needed --pgpfetch - < .config/pkgs`
+
+## Setting up librewolf
+
+1. Set up syncthing to `~/sync`
+2. `ln -sf ~/sync/.librewolf ~/.librewolf`
+3. Launch librewolf
+4. `sudo python-pywalfox install`
 
 ## Usage
 

@@ -5,6 +5,7 @@ brave-bin
 chafa
 cmake
 devour
+ff2mpv-native-messaging-host-git
 ffmpegthumbnailer
 fzf
 gcc
@@ -13,6 +14,7 @@ htop
 httpie
 keepassxc
 lf-bin
+librewolf-bin
 libxft-bgra
 mutt-wizard
 nodejs
@@ -23,6 +25,7 @@ patch
 pfetch
 python-pip
 python-pynvim
+python-pywalfox
 ranger
 redshift
 scrot
