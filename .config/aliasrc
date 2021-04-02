@@ -69,7 +69,8 @@ alias \
     a="paru" \
     mc="make clean" \
     smci="sudo make clean install" \
-    gma="gcc main.c && ./a.out"
+    gma="gcc main.c && ./a.out" \
+    jf="jftui"
 
 alias \
     cst="cd ~/.config/st" \
