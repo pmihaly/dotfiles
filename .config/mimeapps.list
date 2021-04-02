@@ -17,3 +17,19 @@ application/rss+xml=rss.desktop
 video/x-matroska=video.desktop
 x-scheme-handler/lbry=lbry.desktop
 inode/directory=file.desktop
+
+x-scheme-handler/http=browser.desktop
+text/html=browser.desktop
+text/xml=browser.desktop
+application/xhtml_xml=browser.desktop
+image/webp=browser.desktop
+x-scheme-handler/https=browser.desktop
+x-scheme-handler/ftp=browser.desktop
+
+[Added Associations]
+text/html=browser.desktop;
+text/xml=browser.desktop;
+application/xhtml_xml=browser.desktop;
+image/webp=browser.desktop;
+x-scheme-handler/https=browser.desktop;
+x-scheme-handler/ftp=browser.desktop;

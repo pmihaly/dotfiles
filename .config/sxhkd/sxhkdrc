@@ -1,5 +1,5 @@
 super + w
-    brave
+    $BROWSER
 
 super + x
     slock
@@ -14,7 +14,7 @@ super + o
     zathura ~/sync/orarend.pdf
 
 super + r
-    $TERMINAL -e $SHELL -ic $FILEBROWSER
+    $TERMINAL -e $FILEBROWSER
 
 super + c
     $TERMINAL -e python -ic ""

@@ -7,7 +7,7 @@ unsetopt PROMPT_SP
 # Default programs
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
-export BROWSER='/usr/bin/brave'
+export BROWSER='/usr/bin/librewolf'
 export FILEBROWSER='/usr/bin/lf'
 export TERMINAL='/usr/local/bin/st'
 
