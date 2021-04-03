@@ -17,9 +17,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 
-Plug 'arcticicestudio/nord-vim'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-airline/vim-airline'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -28,6 +28,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 " Super basic settings
@@ -36,6 +38,7 @@ call plug#end()
     set go=a
     set mouse=a
     set nohlsearch
+    set ignorecase
     set clipboard+=unnamedplus
     set noshowmode
     set noruler
@@ -43,17 +46,23 @@ call plug#end()
     set noshowcmd
     set autochdir
 
-    colorscheme nord
-    let g:airline_theme='nord'
+    colorscheme wal
+    " let g:airline_theme='nord'
 
     set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     set t_Co=256                         " Enable 256 colors
-    set termguicolors                    " Enable GUI colors for the terminal to get truecolor
+    " set termguicolors                    " Enable GUI colors for the terminal to get truecolor
 
 " Don't exit visual mode when indenting with > and <
-    vmap < <gv
-    vmap > >gv
+    vmap <A-h> <gv
+    vmap <A-l> >gv
+
+    nmap <A-h> a<C-d><Esc>
+    nmap <A-l> a<C-t><Esc>
+
+    imap <A-h> <C-d>
+    imap <A-l> <C-t>
 
 " Some basics:
 	nnoremap c "_c
@@ -189,10 +198,10 @@ endif
 
 " Custom
 map <A-a> :CocAction<CR>
-map <A-c> :CocCommand<CR>
+map <A-c>c :CocCommand<CR>
 map <silent> <A-f> :CocCommand explorer<CR>
 map <A-p> :w \| CocCommand python.execInTerminal<CR>
-map <A-l> :CocList<CR>
+" map <A-l> :CocList<CR>
 
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
