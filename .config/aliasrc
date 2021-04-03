@@ -79,6 +79,7 @@ alias \
     cdmenu="cd ~/.config/dmenu" \
     cslstatus="cd ~/.config/slstatus"
 
+alias refr="pushd . && for d in {dwm,st,slstatus,slock,dmenu}; do cd ~/.config/$d && sudo make install; done && popd"
 
 alias \
     cv="$EDITOR ~/.config/nvim/init.vim" \
