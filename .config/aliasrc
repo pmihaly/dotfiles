@@ -17,6 +17,22 @@ done
 alias sudo="doas"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+# Recompiles all suckless stuff
+refr() {
+    pushd .
+    for d in {dwm,st,slstatus,slock,dmenu}
+    do cd ~/.config/$d && sudo make install
+    done
+    popd
+}
+
+setwallpaper() {
+    cp $1 ~/.config/wallpaper.jpg
+    wal -c
+    wal -i ~/.config/wallpaper.jpg
+    refr
+}
+
 dfs () {
     [ $# -eq 0 ] && dotfiles status || dotfiles $@
 }
@@ -78,8 +94,6 @@ alias \
     cslock="cd ~/.config/slock" \
     cdmenu="cd ~/.config/dmenu" \
     cslstatus="cd ~/.config/slstatus"
-
-alias refr="pushd . && for d in {dwm,st,slstatus,slock,dmenu}; do cd ~/.config/$d && sudo make install; done && popd"
 
 alias \
     cv="$EDITOR ~/.config/nvim/init.vim" \
