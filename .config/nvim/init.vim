@@ -9,14 +9,14 @@ endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
 Plug 'junegunn/goyo.vim'
-Plug 'jreybert/vimagit'
 Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'jreybert/vimagit'
 
+Plug 'dylanaraps/wal.vim'
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'vim-airline/vim-airline'
@@ -29,7 +29,7 @@ Plug 'mattn/emmet-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'dylanaraps/wal.vim'
+Plug 'axvr/org.vim'
 call plug#end()
 
 " Super basic settings
@@ -91,6 +91,10 @@ call plug#end()
 	set autoindent
 	set fileformat=unix
 
+" org.vim
+    syntax enable
+    filetype plugin indent on
+
 " fzf
 	map <leader><space> :Files<CR>
 
@@ -136,7 +140,7 @@ call plug#end()
 
 
 " Nerd tree
-	map <leader>n :NERDTreeToggle<CR>
+	map <leader>f :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     if has('nvim')
         let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
@@ -278,8 +282,8 @@ endfunction
 nmap <rn> <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
 	autocmd!
