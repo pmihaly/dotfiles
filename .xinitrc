@@ -4,6 +4,7 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
 wal -R &
 xwallpaper --zoom ~/.config/wallpaper.jpg &
 xset r rate 300 50 &
+picom -b &
 
 slstatus &
 sxhkd &
