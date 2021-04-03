@@ -20,13 +20,6 @@
 6. `source .zshrc && dotfiles config --local status.showUntrackedFiles no`
 7. `paru -S --needed --pgpfetch - < .config/pkgs`
 
-## Setting up librewolf
-
-1. Set up syncthing to `~/sync`
-2. `ln -sf ~/sync/.librewolf ~/.librewolf`
-3. Launch librewolf
-4. `sudo python-pywalfox install`
-
 ## Usage
 
 To manage the dotfiles, use the `dfs` git alias.
