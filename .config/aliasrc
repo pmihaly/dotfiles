@@ -89,6 +89,7 @@ alias \
     cx="$EDITOR ~/.xinitrc" \
     ca="$EDITOR ~/.config/aliasrc" \
     cl="$EDITOR ~/.config/lf/lfrc" \
+    cc="$EDITOR ~/.config/picom/picom.conf" \
     cpk="$EDITOR ~/.config/pkgs"
 
 alias \
