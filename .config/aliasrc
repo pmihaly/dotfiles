@@ -21,7 +21,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 refr() {
     pushd .
     for d in {dwm,st,slstatus,slock,dmenu}
-    do cd ~/.config/$d && sudo make install
+    do cd ~/.config/$d && sudo make clean install
     done
     popd
 }
