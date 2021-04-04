@@ -29,8 +29,10 @@ refr() {
 setwallpaper() {
     cp $1 ~/.config/wallpaper.jpg
     wal -c
-    wal -i ~/.config/wallpaper.jpg
+    wal -n -i ~/.config/wallpaper.jpg
+    xwallpaper --zoom ~/.config/wallpaper.jpg
     refr
+    xdotool key "super+shift+r"
 }
 
 dfs () {
