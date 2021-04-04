@@ -80,7 +80,7 @@ call plug#end()
 " Goyo plugin makes text more readable when writing prose:
 	map <silent> <leader>g :Goyo \| set linebreak<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
-	map <leader>o :setlocal spell! spelllang=en_us<CR>
+	map <leader>o :setlocal spell! spelllang=en_gb,hu,de_de<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
 " Managing tabs
