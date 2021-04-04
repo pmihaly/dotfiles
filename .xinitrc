@@ -26,8 +26,8 @@ redshift -l 47.29:19.2 &
 
 # sync emails periodically
 while true; do
-   mbsync -a
-   sleep 1m
+   # mbsync -a
+   sleep 5m
 done &
 
 exec dwm
