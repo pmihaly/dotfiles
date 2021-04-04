@@ -13,6 +13,7 @@ eval "$(ssh-agent -s)" &
 unclutter 3 &
 keepassxc &
 redshift -l 47.29:19.2 &
+[[ `pgrep syncthing` ]] && syncthing -no-browser &
 
 (sleep 1 && xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape') &
 
