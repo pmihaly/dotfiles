@@ -33,3 +33,6 @@ super + v
 
 super + i
     dmenuunicode
+
+super + n
+    $TERMINAL -e newsboat
