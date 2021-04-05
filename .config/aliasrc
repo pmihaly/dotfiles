@@ -106,6 +106,10 @@ alias \
     ca="$EDITOR ~/.config/aliasrc" \
     cl="$EDITOR ~/.config/lf/lfrc" \
     cc="$EDITOR ~/.config/picom/picom.conf" \
+    cnc="$EDITOR ~/.config/newsboat/config" \
+    cnu="$EDITOR ~/.config/newsboat/urls" \
+    cm="$EDITOR ~/.config/mpv/mpv.conf" \
+    cf="$EDITOR ~/.mozilla/firefox/*/chrome/userChrome.css" \
     cpk="$EDITOR ~/.config/pkgs"
 
 alias \
