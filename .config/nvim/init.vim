@@ -77,7 +77,7 @@ call plug#end()
 " Perform dot commands over visual blocks:
 	vnoremap . :normal .<CR>
 " Goyo plugin makes text more readable when writing prose:
-	map <silent> <leader>g :Goyo \| set linebreak<CR>
+	map <silent> <leader>f :Goyo \| set linebreak<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_gb,hu,de_de<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
@@ -111,6 +111,8 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " sneak
     let g:sneak#s_next = 1
+    map á <Plug>Sneak_;
+    map é <Plug>Sneak_,
 
 " floaterm
     map <leader>t :FloatermToggle<CR>
@@ -257,11 +259,11 @@ set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <S-j>
+inoremap <silent><expr> <C-j>
 			\ pumvisible() ? "\<C-n>" :
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ coc#refresh()
-inoremap <expr><S-k> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
 	let col = col('.') - 1
