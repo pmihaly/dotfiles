@@ -9,20 +9,15 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
-Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
-" Plug 'jreybert/vimagit'
 
 Plug 'dylanaraps/wal.vim'
-" Plug 'arcticicestudio/nord-vim'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'vim-airline/vim-airline'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
@@ -30,6 +25,9 @@ Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'voldikss/vim-floaterm'
 Plug 'axvr/org.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'wellle/targets.vim'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 " Super basic settings
@@ -52,8 +50,9 @@ call plug#end()
     set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     set t_Co=256                         " Enable 256 colors
-    " set termguicolors                    " Enable GUI colors for the terminal to get truecolor
 
+    map <leader>pi :PlugInstall<CR>
+    map <leader>pc :PlugClean<CR>
 " Don't exit visual mode when indenting with > and <
     vmap <A-h> <gv
     vmap <A-l> >gv
@@ -91,6 +90,27 @@ call plug#end()
 	set autoindent
 	set fileformat=unix
 
+
+"""" CUSTOM SETTINGS
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+
+" sneak
+    let g:sneak#s_next = 1
 
 " floaterm
     map <leader>t :FloatermToggle<CR>
@@ -144,16 +164,6 @@ call plug#end()
 	inoremap <M-7> <esc>7gt<CR>
 	inoremap <M-8> <esc>8gt<CR>
 	inoremap <M-9> <esc>9gt<CR>
-
-
-" Nerd tree
-	" map <leader>f :NERDTreeToggle<CR>
-	" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-    " if has('nvim')
-        " let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
-    " else
-        " let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
-    " endif
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h
