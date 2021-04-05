@@ -13,6 +13,7 @@ highlight
 htop
 httpie
 keepassxc
+lazygit
 lf-bin
 libxft-bgra
 mutt-wizard
@@ -29,6 +30,7 @@ python-pynvim
 python-pywalfox
 ranger
 redshift
+ripgrep
 scrot
 sxhkd
 sxiv

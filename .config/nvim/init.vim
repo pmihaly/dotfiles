@@ -1,5 +1,6 @@
 let mapleader =" "
 
+
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
 	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
@@ -14,7 +15,7 @@ Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
-Plug 'jreybert/vimagit'
+" Plug 'jreybert/vimagit'
 
 Plug 'dylanaraps/wal.vim'
 " Plug 'arcticicestudio/nord-vim'
@@ -23,12 +24,11 @@ Plug 'dylanaraps/wal.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
+Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'voldikss/vim-floaterm'
 Plug 'axvr/org.vim'
 call plug#end()
 
@@ -91,12 +91,19 @@ call plug#end()
 	set autoindent
 	set fileformat=unix
 
+
+" floaterm
+    map <leader>t :FloatermToggle<CR>
+    map <leader>g :FloatermNew lazygit<CR>
+    let g:floaterm_autoclose = 1
+
 " org.vim
     syntax enable
     filetype plugin indent on
 
 " fzf
 	map <leader><space> :Files<CR>
+	map <leader>r :Rg<CR>
 
 " vimwiki
 	let g:vimwiki_global_ext = 0
@@ -140,13 +147,13 @@ call plug#end()
 
 
 " Nerd tree
-	map <leader>f :NERDTreeToggle<CR>
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-    if has('nvim')
-        let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
-    else
-        let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
-    endif
+	" map <leader>f :NERDTreeToggle<CR>
+	" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    " if has('nvim')
+        " let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
+    " else
+        " let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
+    " endif
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h
@@ -240,11 +247,11 @@ set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <S-j>
 			\ pumvisible() ? "\<C-n>" :
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-k> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
 	let col = col('.') - 1
