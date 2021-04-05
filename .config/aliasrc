@@ -81,7 +81,6 @@ alias \
     v="$EDITOR" \
     p="sudo pacman" \
     z="zathura" \
-    r="$FILEBROWSER" \
     rs="ka sxhkd ; sxhkd" \
     p="sudo pacman" \
     a="paru" \
@@ -130,3 +129,10 @@ alias \
     ni="npm install"
 
 alias cal="cal 2021"
+
+alias \
+    s="cd ~/sync" \
+    vw="cd ~/sync/vimwiki" \
+    dl="cd ~/dl" \
+    dc="cd ~/docs" \
+    r="cd ~/repos"
