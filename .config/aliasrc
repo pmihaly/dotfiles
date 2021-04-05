@@ -135,4 +135,5 @@ alias \
     vw="cd ~/sync/vimwiki" \
     dl="cd ~/dl" \
     dc="cd ~/docs" \
-    r="cd ~/repos"
+    r="cd ~/repos" \
+    w="cd ~/sync/háttérképek"
