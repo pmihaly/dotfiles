@@ -221,7 +221,7 @@ endif
 
 " Custom
 map <A-a> :CocAction<CR>
-map <A-c>c :CocCommand<CR>
+map <A-c> :CocCommand<CR>
 map <silent> <A-f> :CocCommand explorer<CR>
 map <A-p> :w \| CocCommand python.execInTerminal<CR>
 " map <A-l> :CocList<CR>
@@ -236,10 +236,9 @@ let g:coc_global_extensions = [
 	\ 'coc-html',
 	\ 'coc-css',
 	\ 'coc-json',
-	\ 'coc-angular',
 	\ 'coc-explorer',
 	\ 'coc-vimtex',
-  \ 'coc-python',
+  \ 'coc-pyright',
   \ 'coc-marketplace'
 	\ ]
 
