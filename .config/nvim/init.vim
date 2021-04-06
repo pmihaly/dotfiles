@@ -28,6 +28,7 @@ Plug 'axvr/org.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'wellle/targets.vim'
 Plug 'honza/vim-snippets'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Super basic settings
@@ -111,6 +112,12 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " sneak
     let g:sneak#s_next = 1
+    let g:sneak#use_ic_scs = 1
+    let g:sneak#label = 1
+    let g:sneak#label_esc = "\<Space>"
+    let g:sneak#target_labels = "fjdkslaéá"
+    highlight Sneak ctermfg=black ctermbg=red
+
     map á <Plug>Sneak_;
     map é <Plug>Sneak_,
 
