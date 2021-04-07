@@ -14,8 +14,6 @@ gcc
 highlight
 htop
 httpie
-iosevka
-iosevka-term
 keepassxc
 lazygit
 lf-bin
@@ -41,6 +39,9 @@ sxhkd
 sxiv
 syncthing
 tmux
+ttf-iosevka
+ttf-iosevka-term
+ttf-joypixels
 ueberzug
 unclutter
 urlview
