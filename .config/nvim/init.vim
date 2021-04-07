@@ -64,6 +64,10 @@ call plug#end()
     imap <A-h> <C-d>
     imap <A-l> <C-t>
 
+
+    map <A-j> :move +1<CR>
+    map <A-k> :move -2<CR>
+
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
