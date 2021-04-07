@@ -55,18 +55,18 @@ call plug#end()
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
 " Don't exit visual mode when indenting with > and <
-    vmap <A-h> <gv
-    vmap <A-l> >gv
+    vmap <silent> <A-h> <gv
+    vmap <silent> <A-l> >gv
 
-    nmap <A-h> a<C-d><Esc>
-    nmap <A-l> a<C-t><Esc>
+    nmap <silent> <A-h> a<C-d><Esc>
+    nmap <silent> <A-l> a<C-t><Esc>
 
-    imap <A-h> <C-d>
-    imap <A-l> <C-t>
+    imap <silent> <A-h> <C-d>
+    imap <silent> <A-l> <C-t>
 
 
-    map <A-j> :move +1<CR>
-    map <A-k> :move -2<CR>
+    map <silent> <A-j> :move +1<CR>
+    map <silent> <A-k> :move -2<CR>
 
 " Some basics:
 	nnoremap c "_c
