@@ -35,4 +35,4 @@ super + i
     dmenuunicode
 
 super + n
-    $TERMINAL -e newsboat -c ~/.cache/newsboatcache
+    $TERMINAL -e newsboat
