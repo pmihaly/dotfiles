@@ -27,11 +27,13 @@ refr() {
 }
 
 # Sets wallpaper, compiles colorscheme and recompiles suckless stuff
+# If no wallpaper was given, it resets to
 setwallpaper() {
-    cp $1 ~/.config/wallpaper.jpg
+    WALLPAPER=~/.config/wallpaper.jpg
+    [ -z $1 ] || cp $1 $WALLPAPER
     wal -c
-    wal -n -i ~/.config/wallpaper.jpg &&
-    xwallpaper --zoom ~/.config/wallpaper.jpg &&
+    wal -n -i $WALLPAPER &&
+    xwallpaper --zoom $WALLPAPER &&
     refr &&
     xdotool key "super+shift+r"
 }
