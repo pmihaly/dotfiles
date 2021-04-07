@@ -98,22 +98,6 @@ call plug#end()
 
 """" CUSTOM SETTINGS
 
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <C-j> <Plug>(coc-snippets-select)
-
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-
-
 " sneak
     let g:sneak#s_next = 1
     let g:sneak#use_ic_scs = 1
@@ -230,12 +214,29 @@ endif
 " COC
 """""""""""""""""""""""
 
+
+
 " Custom
 map <A-a> :CocAction<CR>
 map <A-c> :CocCommand<CR>
 map <silent> <A-f> :CocCommand explorer<CR>
 map <A-p> :w \| CocCommand python.execInTerminal<CR>
 " map <A-l> :CocList<CR>
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
