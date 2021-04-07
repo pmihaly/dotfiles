@@ -3,8 +3,6 @@ atool
 bashtop
 chafa
 cmake
-dash
-dashbinsh
 devour
 ff2mpv-native-messaging-host-git
 ffmpegthumbnailer
@@ -22,6 +20,7 @@ mutt-wizard
 newsboat
 nodejs
 nodejs-neovim
+noto-fonts
 noto-fonts-emoji
 npm
 opendoas
@@ -41,7 +40,6 @@ syncthing
 tmux
 ttf-iosevka
 ttf-iosevka-term
-ttf-joypixels
 ueberzug
 unclutter
 urlview

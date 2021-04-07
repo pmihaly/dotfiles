@@ -72,7 +72,6 @@ alias \
     mkd="mkdir -pv" \
     yt="ytfzf -lt" \
     yts="yt -S" \
-    mpv="mpv --fs"
 
 # DMENU_COLORS="-nb \"$color0\" -nf \"$color15\" -sb \"$color2\" -sf \"$color15\""
 # DISPLAY_WIDTH="$(expr $(xrandr | grep "*" | grep -oP "[0-9]+(?=x)") - 20)"
