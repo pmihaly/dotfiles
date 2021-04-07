@@ -26,6 +26,7 @@ refr() {
     popd
 }
 
+# Sets wallpaper, compiles colorscheme and recompiles suckless stuff
 setwallpaper() {
     cp $1 ~/.config/wallpaper.jpg
     wal -c
@@ -33,6 +34,12 @@ setwallpaper() {
     xwallpaper --zoom ~/.config/wallpaper.jpg
     refr
     xdotool key "super+shift+r"
+}
+
+# Converts given newspipe subscriptions json file to list of rss urls, suitable for newsboat
+newsbrss() {
+    jq '.subscriptions[] | "\(.url) \(.name)"' $1 |
+        sed "s/^\"//g ; s/\"$//g ; s/channel\//feeds\/videos.xml?channel_id=/g ; s/\s/ # /" > ~/.config/newsboat/urls
 }
 
 dfs () {
