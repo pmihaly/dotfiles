@@ -4,4 +4,4 @@
 cat ~/.config/configaliases |
     fzf |
     cut -d" " -f2- |
-    xargs -I{} sh -c "$EDITOR {}"
+    xargs -I{} sh -c "$EDITOR $HOME/{}"

@@ -111,22 +111,6 @@ alias \
     cslstatus="cd ~/.config/slstatus"
 
 alias \
-    cv="$EDITOR ~/.config/nvim/init.vim" \
-    cb="$EDITOR ~/.bashrc" \
-    cz="$EDITOR ~/.config/zsh/.zshrc" \
-    czp="$EDITOR ~/.zprofile" \
-    cs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
-    cx="$EDITOR ~/.xinitrc" \
-    ca="$EDITOR ~/.config/aliasrc" \
-    cl="$EDITOR ~/.config/lf/lfrc" \
-    cc="$EDITOR ~/.config/picom/picom.conf" \
-    cnc="$EDITOR ~/.config/newsboat/config" \
-    cnu="$EDITOR ~/.config/newsboat/urls" \
-    cm="$EDITOR ~/.config/mpv/mpv.conf" \
-    cf="$EDITOR ~/.mozilla/firefox/*/chrome/userChrome.css" \
-    cpk="$EDITOR ~/.config/pkgs"
-
-alias \
     g="git" \
     gs="git status" \
     ga="git add" \

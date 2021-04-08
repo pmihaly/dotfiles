@@ -35,4 +35,7 @@ super + n
     $TERMINAL -e newsboat
 
 super + c
-    $TERMINAL -e ~/.local/bin/c
+    $TERMINAL -e ~/.local/bin/configedit
+
+super + s
+    $TERMINAL -e ~/.local/bin/scriptedit
