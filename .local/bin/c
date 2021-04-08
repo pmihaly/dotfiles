@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+cat ~/.config/configaliases |
+    fzf |
+    cut -d" " -f2- |
+    xargs -I{} sh -c "$EDITOR {}"
