@@ -135,3 +135,7 @@ alias \
     dc="cd ~/docs" \
     r="cd ~/repos" \
     w="cd ~/sync/háttérképek"
+
+alias \
+    ce="configedit" \
+    se="scriptedit"
