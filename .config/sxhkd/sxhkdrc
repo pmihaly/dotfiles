@@ -16,9 +16,6 @@ super + o
 super + r
     $TERMINAL -e $FILEBROWSER
 
-super + c
-    $TERMINAL -e python -ic ""
-
 super + e
     $TERMINAL -e neomutt
 
@@ -26,7 +23,7 @@ F11
     scrot
 
 super + y
-    $TERMINAL -e $SHELL -ic 'yt -s'
+    $TERMINAL -e ytfzf -tls
 
 super + v
     $TERMINAL -e nvim -c VimwikiIndex
@@ -36,3 +33,6 @@ super + i
 
 super + n
     $TERMINAL -e newsboat
+
+super + c
+    $TERMINAL -e ~/.local/bin/c

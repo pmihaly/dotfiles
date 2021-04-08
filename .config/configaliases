@@ -1,0 +1,15 @@
+ca $HOME/.config/aliasrc
+cb $HOME/.bashrc
+cc $HOME/.config/picom/picom.conf
+cca $HOME/.config/configalias
+cf $HOME/.mozilla/firefox/*/chrome/userChrome.css
+cl $HOME/.config/lf/lfrc
+cm $HOME/.config/mpv/mpv.conf
+cnc $HOME/.config/newsboat/config
+cnu $HOME/.config/newsboat/urls
+cpk $HOME/.config/pkgs
+cs $HOME/.config/sxhkd/sxhkdrc
+cv $HOME/.config/nvim/init.vim
+cx $HOME/.xinitrc
+cz $HOME/.config/zsh/.zshrc
+czp $HOME/.zprofile
