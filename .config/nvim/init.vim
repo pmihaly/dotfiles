@@ -52,8 +52,11 @@ call plug#end()
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     set t_Co=256                         " Enable 256 colors
 
+    map <leader>mm :!markmap "%"<CR>
+
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
+
 " Don't exit visual mode when indenting with > and <
     vmap <silent> <A-h> <gv
     vmap <silent> <A-l> >gv
