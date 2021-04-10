@@ -1,5 +1,5 @@
 #!/bin/sh
 
 ls .local/bin |
-    fzf |
+    fzf --color=bw --reverse --border |
     xargs -I{} sh -c "$EDITOR $HOME/.local/bin/{}"
