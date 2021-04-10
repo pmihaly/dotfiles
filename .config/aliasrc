@@ -119,7 +119,8 @@ alias \
     gr="git restore" \
     gra="git restore ." \
     gd="git diff" \
-    gp="git push"
+    gp="git push" \
+    gpl="git pull"
 
 alias \
     ns="npm start" \
