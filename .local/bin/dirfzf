@@ -1,5 +1,5 @@
 #!/bin/sh
 
-ls -f $1 |
+ls -f -A $1 |
     fzf --color=bw --reverse --border |
     xargs -I{} sh -c "$EDITOR $HOME/$1/{}"
