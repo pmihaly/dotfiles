@@ -24,10 +24,4 @@ redshift -l 47.29:19.2 &
 # 	! pidof -s pulseaudio >/dev/null 2>&1 &&
 # 	setsid -f pulseaudio --start --exit-idle-time=-1 >/dev/null 2>&1
 
-# sync emails periodically
-while true; do
-   # mbsync -a
-   sleep 5m
-done &
-
 exec dwm
