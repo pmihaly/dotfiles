@@ -2,6 +2,7 @@ ca .config/aliasrc
 cb .bashrc
 cc .config/picom/picom.conf
 bc .config/bookmark-configs
+bd .config/bookmark-dirs
 cf .mozilla/firefox/*/chrome/userChrome.css
 cl .config/lf/lfrc
 cm .config/mpv/mpv.conf

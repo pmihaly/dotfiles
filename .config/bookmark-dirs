@@ -1,10 +1,10 @@
 cac .cache
 cf .config
-D Downloads
-d Documents
+D dl
+d docs
 dt .local/share
-m Music
-pp Pictures
+m music
+pp pics
 sc .local/bin
 src .local/src
 st .config/st
@@ -14,4 +14,4 @@ dmenu .config/dmenu
 slstatus .config/slstatus
 s sync
 vw sync/vimwiki
-h .
+h ~
