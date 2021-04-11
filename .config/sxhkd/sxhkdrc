@@ -26,7 +26,7 @@ super + y
     $TERMINAL -e ytfzf -tls
 
 super + v
-    $TERMINAL -e nvim -c VimwikiIndex
+    $TERMINAL -e $EDITOR -c VimwikiIndex
 
 super + i
     dmenuunicode
@@ -38,4 +38,7 @@ super + c
     $TERMINAL -e ~/.local/bin/configedit
 
 super + s
-    $TERMINAL -e ~/.local/bin/scriptedit
+    $TERMINAL -e ~/.local/bin/scriptfzf
+
+super + p
+    $TERMINAL -e ~/.local/bin/projectfzf
