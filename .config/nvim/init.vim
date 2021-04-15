@@ -52,7 +52,10 @@ call plug#end()
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     set t_Co=256                         " Enable 256 colors
 
-    map <leader>mm :!markmap "%"<CR>
+    map <leader>cm :!markmap "%"<CR>
+    map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
+    map <leader>cc :w \| !gcc "%" && ./a.out<CR>
+
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
