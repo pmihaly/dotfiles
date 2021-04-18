@@ -1,5 +1,10 @@
-#show-read-feeds no
 auto-reload yes
+
+refresh-on-startup yes
+reload-time 20
+reload-threads 2
+show-read-articles no
+show-read-feeds no
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
@@ -22,8 +27,8 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-color listnormal cyan default
-color listfocus black yellow standout bold
+# color listnormal cyan default
+# color listfocus black yellow standout bold
 color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
