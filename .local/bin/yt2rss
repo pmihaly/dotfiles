@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Converts given newspipe subscriptions .json file to list of rss urls, suitable for newsboat usage
+# Non youtube feeds in original newsboat urls file will be preserved
+
+
+NEWSBOAT_URLS=~/.config/newsboat/urls
+
+cat <<EOF > $NEWSBOAT_URLS
+$(grep -v "https://www.youtube.com/feeds/videos.xml?channel_id=" $NEWSBOAT_URLS)
+$(jq '.subscriptions[] | "\(.url) \(.name)"' $1 |
+    sed "s/^\"//g ; s/\"$//g ; s/channel\//feeds\/videos.xml?channel_id=/g ; s/\s/ # /")
+EOF
