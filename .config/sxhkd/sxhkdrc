@@ -19,7 +19,7 @@ super + r
 super + e
     $TERMINAL -e neomutt
 
-F11
+Print
     scrot
 
 super + y
