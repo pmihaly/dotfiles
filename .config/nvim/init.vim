@@ -54,8 +54,7 @@ call plug#end()
 
     map <leader>cm :!markmap "%"<CR>
     map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
-    map <leader>cc :w \| !gcc "%" && ./a.out<CR>
-
+    map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
