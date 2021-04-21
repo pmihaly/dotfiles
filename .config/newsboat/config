@@ -3,8 +3,8 @@ auto-reload yes
 refresh-on-startup yes
 reload-time 20
 reload-threads 2
-show-read-articles no
-show-read-feeds no
+# show-read-articles no
+# show-read-feeds no
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
