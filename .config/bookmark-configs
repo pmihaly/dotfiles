@@ -19,3 +19,4 @@ cdwm .config/dwm/config.h
 cslock .config/slock/config.h
 cdmenu .config/dmenu/config.h
 cslstatus .config/slstatus/config.h
+cz .config/wal/templates/zathurarc
