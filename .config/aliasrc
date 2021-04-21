@@ -45,7 +45,7 @@ dfs () {
 alias \
   dfsa="dotfiles add" \
   dfsc="dotfiles commit" \
-  dfsac="dotfiles add && dotfiles commit" \
+  dfsac="dotfiles add $1 && dotfiles commit" \
   dfsp="dotfiles push" \
   dfspl="dotfiles pull" \
   dfsd="dotfiles diff" \
