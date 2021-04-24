@@ -58,6 +58,8 @@ call plug#end()
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
+    map <leader>pud :PlugUpdate<CR>
+    map <leader>pug :PlugUpgrade<CR>
 
 " Don't exit visual mode when indenting with > and <
     vmap <silent> <A-h> <gv
