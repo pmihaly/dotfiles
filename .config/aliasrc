@@ -10,7 +10,7 @@
 
 
 # sudo not required for some system commands
-for x in mount umount sv pacman updatedb su ; do
+for x in mount umount sv pacman updatedb su cryptsetup reboot poweroff; do
 	alias $x="sudo $x"
 done
 
