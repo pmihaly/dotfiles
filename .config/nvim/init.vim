@@ -61,7 +61,7 @@ call plug#end()
     map <leader>pud :PlugUpdate<CR>
     map <leader>pug :PlugUpgrade<CR>
 
-" Don't exit visual mode when indenting with > and <
+" Indenting
     vmap <silent> <A-h> <gv
     vmap <silent> <A-l> >gv
 
@@ -71,9 +71,15 @@ call plug#end()
     imap <silent> <A-h> <C-d>
     imap <silent> <A-l> <C-t>
 
+" Moving lines
+    vmap <silent> <A-j> :move +1<CR>
+    vmap <silent> <A-k> :move -2<CR>
 
-    map <silent> <A-j> :move +1<CR>
-    map <silent> <A-k> :move -2<CR>
+    nmap <silent> <A-j> :move +1<CR>
+    nmap <silent> <A-k> :move -2<CR>
+
+    imap <silent> <A-j> <Esc>:move +1<CR>
+    imap <silent> <A-k> <Esc>:move -2<CR>
 
 " Some basics:
 	nnoremap c "_c
