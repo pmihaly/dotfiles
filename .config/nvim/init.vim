@@ -152,6 +152,8 @@ call plug#end()
 	map <leader>we :wq<CR>
 	map <leader>wr :w<CR>
 	map <leader>wv :vs<CR>
+    " Pressing W by accident -> save file
+    cnoreabbrev W w
 
 " Tab navigation
 	map <leader>wn :tabnew<CR>
