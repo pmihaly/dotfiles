@@ -23,7 +23,7 @@ Print
     scrot
 
 super + y
-    $TERMINAL -e ytfzf -tls
+    $TERMINAL -e ytfzf -lt
 
 super + v
     $TERMINAL -e $EDITOR -c VimwikiIndex
