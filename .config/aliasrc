@@ -59,7 +59,8 @@ alias \
   dfsp="dotfiles push" \
   dfspl="dotfiles pull" \
   dfsd="dotfiles diff" \
-  dfsr="dotfiles restore"
+  dfsr="dotfiles restore" \
+  dfsrs="dotfiles restore --staged"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
@@ -67,7 +68,7 @@ alias \
     mv="mv -iv" \
     rm="rm -vI" \
     bc="bc -ql" \
-    mkd="mkdir -pv" \
+    mkdir="mkdir -pv" \
     yt="ytfzf -lt" \
     yts="ytfzf -st" \
 
