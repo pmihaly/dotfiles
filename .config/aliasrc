@@ -38,6 +38,16 @@ setwallpaper() {
     xdotool key "super+shift+r"
 }
 
+tmnt() {
+    sudo cryptsetup open $1 crypt
+    sudo mount /dev/mapper/crypt /mnt/
+}
+
+tumnt() {
+    sudo umount /mnt
+    sudo cryptsetup close crypt
+}
+
 dfs () {
     [ $# -eq 0 ] && dotfiles status || dotfiles $@
 }
