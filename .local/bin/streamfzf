@@ -2,4 +2,4 @@
 
 # Reads streamer channels from file, displays the choices and plays them in mpv using streamlink
 
-cat ~/sync/streams | fzf --color=bw --reverse --border | xargs -i{} streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k' {} best
+cat ~/sync/streams | fzf --color=bw --reverse --border | xargs -i{} streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k' --title "{title} -- {author} -- {category}" {} best
