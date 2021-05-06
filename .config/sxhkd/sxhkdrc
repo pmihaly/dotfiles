@@ -10,9 +10,6 @@ super + shift + x
 super + a
     $TERMINAL -e pulsemixer
 
-super + o
-    zathura ~/sync/orarend.pdf
-
 super + r
     $TERMINAL -e $FILEBROWSER
 
