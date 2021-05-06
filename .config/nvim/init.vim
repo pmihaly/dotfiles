@@ -46,7 +46,6 @@ call plug#end()
     set autochdir
 
     colorscheme wal
-    " let g:airline_theme='nord'
 
     set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
@@ -55,6 +54,7 @@ call plug#end()
     map <leader>cm :!markmap "%"<CR>
     map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
+    map <leader>s :!clear && shellcheck -x %<CR>
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
