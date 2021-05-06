@@ -6,6 +6,7 @@ bd .config/bookmark-dirs
 cf .mozilla/firefox/*/chrome/userChrome.css
 cl .config/lf/lfrc
 cm .config/mpv/mpv.conf
+cmi .config/mpv/input.conf
 cnc .config/newsboat/config
 cnu .config/newsboat/urls
 cpk .config/pkgs
