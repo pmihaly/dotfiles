@@ -54,7 +54,8 @@ call plug#end()
     map <leader>cm :!markmap "%"<CR>
     map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
-    map <leader>s :!clear && shellcheck -x %<CR>
+    map <leader>csh :!clear && shellcheck -x %<CR>
+    map <leader>csl :terminal sudo make install <CR>
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
@@ -143,17 +144,13 @@ call plug#end()
     let g:user_emmet_mode='n'
     let g:user_emmet_leader_key=','
 
-" ~%.config/pkgs
-	autocmd BufWritePre ~/.config/pkgs sort
-
 " Window navigation
-	map <leader>q :q!<CR>
-	map <leader>wq :wq<CR>
-	map <leader>we :wq<CR>
-	map <leader>wr :w<CR>
-	map <leader>wv :vs<CR>
+	noremap <leader>q :q!<CR>
+	noremap <leader>ww :w<CR>
+	noremap <leader>we :wq<CR>
     " Pressing W by accident -> save file
     cnoreabbrev W w
+	map <leader>wv :vs<CR>
 
 " Tab navigation
 	map <leader>wn :tabnew<CR>
@@ -216,8 +213,15 @@ call plug#end()
 	autocmd BufRead,BufNewFile Xresources,Xdefaults,xresources,xdefaults set filetype=xdefaults
 	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 
-" Kill and restart sxhkd on config edit
+" sxhkd
     autocmd BufWritePost sxhkdrc !killall -q sxhkd;setsid -f sxhkd
+
+" ~/.config/pkgs
+	autocmd BufWritePre ~/.config/pkgs sort
+
+" slstatus
+    autocmd BufWritePost ~/.config/slstatus/config.h :terminal cd ~/.config/slstatus/ && sudo make install && { killall -q slstatus;setsid -f slstatus }
+
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
