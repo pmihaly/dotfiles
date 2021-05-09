@@ -69,7 +69,6 @@ cmd copyto ${{
 }}
 
 cmd setbg "$1"
-cmd bulkrename $vidir
 
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
@@ -94,7 +93,7 @@ map c push A<c-u> # new rename
 map I push A<c-a> # at the very beginning
 map i push A<a-b><a-b><a-f> # before extention
 map a push A<a-b> # after extention
-map B bulkrename
+map B $printf '%s\n' $fx | vidir -
 map b $setbg $f
 map S !$SHELL
 
