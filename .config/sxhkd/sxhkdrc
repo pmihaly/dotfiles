@@ -32,7 +32,7 @@ super + n
     $TERMINAL -e newsboat
 
 super + c
-    $TERMINAL -e ~/.local/bin/configedit
+    $TERMINAL -e ~/.local/bin/configfzf
 
 super + s
     $TERMINAL -e ~/.local/bin/scriptfzf

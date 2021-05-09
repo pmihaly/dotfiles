@@ -130,5 +130,6 @@ alias \
     w="cd ~/sync/háttérképek"
 
 alias \
-    ce="configedit" \
-    se="scriptedit"
+    cf="configfzf" \
+    sf="scriptfzf" \
+    pf="projectfzf"
