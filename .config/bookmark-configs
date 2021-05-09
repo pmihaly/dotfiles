@@ -1,23 +1,23 @@
-ca .config/aliasrc
-cb .bashrc
-cc .config/picom/picom.conf
-bc .config/bookmark-configs
-bd .config/bookmark-dirs
-cf .mozilla/firefox/*/chrome/userChrome.css
-cl .config/lf/lfrc
-cm .config/mpv/mpv.conf
-cmi .config/mpv/input.conf
-cnc .config/newsboat/config
-cnu .config/newsboat/urls
-cpk .config/pkgs
-cs .config/sxhkd/sxhkdrc
-cv .config/nvim/init.vim
-cx .xinitrc
-cz .config/zsh/.zshrc
-czp .zprofile
-cst .config/st/config.h
-cdwm .config/dwm/config.h
-cslock .config/slock/config.h
-cdmenu .config/dmenu/config.h
-cslstatus .config/slstatus/config.h
-cz .config/wal/templates/zathurarc
+.config/aliasrc
+.bashrc
+.config/picom/picom.conf
+.config/bookmark-configs
+.config/bookmark-dirs
+.mozilla/firefox/*/chrome/userChrome.css
+.config/lf/lfrc
+.config/mpv/mpv.conf
+.config/mpv/input.conf
+.config/newsboat/config
+.config/newsboat/urls
+.config/pkgs
+.config/sxhkd/sxhkdrc
+.config/nvim/init.vim
+.xinitrc
+.config/zsh/.zshrc
+.zprofile
+.config/st/config.h
+.config/dwm/config.h
+.config/slock/config.h
+.config/dmenu/config.h
+.config/slstatus/config.h
+.config/wal/templates/zathurarc
