@@ -103,13 +103,6 @@ alias \
     jf="jftui"
 
 alias \
-    cst="cd ~/.config/st" \
-    cdwm="cd ~/.config/dwm" \
-    cslock="cd ~/.config/slock" \
-    cdmenu="cd ~/.config/dmenu" \
-    cslstatus="cd ~/.config/slstatus"
-
-alias \
     g="git" \
     gs="git status" \
     ga="git add" \
