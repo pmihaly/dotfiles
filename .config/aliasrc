@@ -134,6 +134,5 @@ alias \
     sf="scriptfzf" \
     pf="projectfzf"
 
-alias \
-    tk="trans" \
-    tm="trans -t 'en+de'"
+function tk() { trans "$*" }
+function tm() { trans -t 'en+de' "$*" }
