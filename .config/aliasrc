@@ -133,3 +133,7 @@ alias \
     cf="configfzf" \
     sf="scriptfzf" \
     pf="projectfzf"
+
+alias \
+    tk="trans" \
+    tm="trans -t 'en+de'"
