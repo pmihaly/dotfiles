@@ -29,7 +29,7 @@ super + i
     dmenuunicode
 
 super + n
-    $TERMINAL -e newsboat
+    $TERMINAL -e newsboat -c ~/sync/newsboat-cache
 
 super + c
     $TERMINAL -e ~/.local/bin/configfzf
