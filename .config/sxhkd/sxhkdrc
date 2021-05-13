@@ -39,3 +39,6 @@ super + s
 
 super + p
     $TERMINAL -e ~/.local/bin/projectfzf
+
+super + J
+    $TERMINAL -e jftui
