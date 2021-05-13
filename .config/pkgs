@@ -16,6 +16,7 @@ keepassxc
 lazygit
 lf-bin
 libxft-bgra
+mpv-vapoursynth-git
 mutt-wizard
 newsboat
 nodejs
@@ -45,6 +46,7 @@ ttf-iosevka-term
 ueberzug
 unclutter
 urlview
+vapoursynth-plugin-mvtools
 vidir
 w3m
 w3m
