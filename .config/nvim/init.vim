@@ -51,11 +51,15 @@ call plug#end()
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     set t_Co=256                         " Enable 256 colors
 
+" compliation
     map <leader>cm :!markmap "%"<CR>
     map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
     map <leader>csh :!clear && shellcheck -x %<CR>
-    map <leader>csl :terminal sudo make install <CR>
+    map <leader>csl :terminal sudo make install<CR>
+
+" insertion
+    map <leader>ic :-1r!curl -s http://whatthecommit.com/index.txt<CR>
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
