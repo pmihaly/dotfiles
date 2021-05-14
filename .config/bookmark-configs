@@ -22,3 +22,4 @@
 .mozilla/firefox/*/chrome/userChrome.css
 .xinitrc
 .zprofile
+sync/streams
