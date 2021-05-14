@@ -2,6 +2,6 @@
 
 
 cat ~/.config/bookmark-configs |
-    fzf --color=bw --reverse --border |
+    fzf --color=bw --reverse |
     cut -d" " -f2- |
     xargs -I{} sh -c "$EDITOR $HOME/{}"
