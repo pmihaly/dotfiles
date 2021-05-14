@@ -4,4 +4,4 @@
 
 cat ~/sync/streams |
     fzf --color=bw --reverse --preview='echo {} | sed "s/https:\/\/www.twitch.tv\///" | xargs -i, curl -s "https://decapi.me/twitch/uptime/,"' |
-    xargs -i{} streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k' --title "{author} - {title} ({category})" {} best
+    xargs -i{} streamlink --twitch-low-latency -p "devour mpv" -a "--cache=yes --demuxer-max-bytes=750k" --title "{author} - {title} ({category})" {} best
