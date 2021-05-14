@@ -1,5 +1,7 @@
 #!/bin/sh
 
-# Reads streamer channels from file, displays the choices and plays them in mpv using streamlink
+# Reads streamers from file, displays the choices (uptime if online, 'offline' if offline) and plays them in mpv using streamlink
 
-cat ~/sync/streams | fzf --color=bw --reverse --border | xargs -i{} streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k' --title "{title} -- {author} -- {category}" {} best
+cat ~/sync/streams |
+    fzf --color=bw --reverse --border --preview='echo {} | sed "s/https:\/\/www.twitch.tv\///" | xargs -i, curl -s "https://decapi.me/twitch/uptime/,"' |
+    xargs -i{} streamlink --twitch-low-latency -p mpv -a '--cache=yes --demuxer-max-bytes=750k' --title "{author} - {title} ({category})" {} best

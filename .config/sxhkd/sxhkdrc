@@ -42,3 +42,6 @@ super + p
 
 super + J
     $TERMINAL -e jftui
+
+super + S
+    $TERMINAL -e streamfzf
