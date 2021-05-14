@@ -38,6 +38,7 @@ setwallpaper() {
     xdotool key "super+shift+r"
 }
 
+# encrypted drive
 tmnt() {
     sudo cryptsetup open $1 crypt
     sudo mount /dev/mapper/crypt /mnt/
@@ -48,6 +49,7 @@ tumnt() {
     sudo cryptsetup close crypt
 }
 
+# dfs shortcut
 dfs () {
     [ $# -eq 0 ] && dotfiles status || dotfiles $@
 }
@@ -71,13 +73,7 @@ alias \
     mkdir="mkdir -pv" \
     yt="ytfzf -lt" \
     yts="ytfzf -st" \
-
-# DMENU_COLORS="-nb \"$color0\" -nf \"$color15\" -sb \"$color2\" -sf \"$color15\""
-# DISPLAY_WIDTH="$(expr $(xrandr | grep "*" | grep -oP "[0-9]+(?=x)") - 20)"
-# DMENU_SIZE="-x 10 -y 10 -z $DISPLAY_WIDTH -h 20"
-# alias \
-#     dmenu_run_pretty="dmenu_run $DMENU_COLORS $DMENU_SIZE" \
-#     dmenu="dmenu $DMENU_COLORS $DMENU_SIZE"
+    cal="cal $(date +'%Y')"
 
 # Colorize commands when possible.
 alias \
@@ -102,6 +98,7 @@ alias \
     gma="gcc -lm main.c && ./a.out" \
     jf="jftui"
 
+# git abbreviations
 alias \
     g="git" \
     gs="git status" \
@@ -114,13 +111,13 @@ alias \
     gp="git push" \
     gpl="git pull"
 
+# npm abbreviations
 alias \
     ns="npm start" \
     nd="npm dev" \
     ni="npm install"
 
-alias cal="cal 2021"
-
+# dir shortcuts
 alias \
     s="cd ~/sync" \
     vw="cd ~/sync/vimwiki" \
@@ -129,10 +126,18 @@ alias \
     r="cd ~/repos" \
     w="cd ~/sync/háttérképek"
 
+# custom fzf scripts
 alias \
     cf="configfzf" \
     sf="scriptfzf" \
-    pf="projectfzf"
+    pf="projectfzf" \
+    strf="streamfzf"
 
+# translation
 function tk() { trans "$*" }
 function tm() { trans -t 'en+de' "$*" }
+
+# curl websites shortcut
+alias \
+    weather="curl wttr.in"
+function cheat() { curl "cheat.sh/$*" }
