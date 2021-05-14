@@ -1,7 +1,6 @@
 #!/bin/sh
 
 
-cat ~/.config/bookmark-configs |
-    fzf --color=bw --reverse |
+fzf --color=bw --reverse < ~/.config/bookmark-configs |
     cut -d" " -f2- |
     xargs -I{} sh -c "$EDITOR $HOME/{}"
