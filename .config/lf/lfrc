@@ -20,9 +20,9 @@ cmd open ${{
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 	image/svg+xml) display -- $f ;;
 	image/*) devour sxiv $f ;;
-	audio/*) mpv --audio-display=no $f ;;
-	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	audio/*) devour mpv --audio-display=no $f ;;
+	video/*) setsid -f devour mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f devour zathura $fx >/dev/null 2>&1 ;;
         # *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
         *) $EDITOR $fx;;
     esac

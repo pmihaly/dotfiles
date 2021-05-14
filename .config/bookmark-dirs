@@ -1,17 +1,17 @@
-cac .cache
-cf .config
-D dl
-d docs
-dt .local/share
-m music
-pp pics
-sc .local/bin
-src .local/src
-st .config/st
-dwm .config/dwm
-slock .config/slock
-dmenu .config/dmenu
-slstatus .config/slstatus
-s sync
-vw sync/vimwiki
-h ~
+.cache
+.config
+.config/dmenu
+.config/dwm
+.config/slock
+.config/slstatus
+.config/st
+.local/bin
+.local/share
+.local/src
+dl
+docs
+music
+pics
+sync
+sync/vimwiki
+~

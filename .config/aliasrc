@@ -90,7 +90,7 @@ alias \
     v="$EDITOR" \
     p="sudo pacman" \
     z="zathura" \
-    rs="ka sxhkd ; sxhkd" \
+    rs="ka sxhkd ; sxhkd &" \
     p="sudo pacman" \
     a="paru" \
     mc="make clean" \
