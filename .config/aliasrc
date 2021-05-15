@@ -124,7 +124,8 @@ alias \
     dl="cd ~/dl" \
     dc="cd ~/docs" \
     r="cd ~/repos" \
-    w="cd ~/sync/háttérképek"
+    w="cd ~/sync/háttérképek" \
+    or="cd ~/sync/org" \
 
 # custom fzf scripts
 alias \
