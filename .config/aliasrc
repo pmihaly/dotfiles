@@ -144,4 +144,4 @@ alias \
 
 function cheat() { curl "cheat.sh/$*" }
 function dict() { curl "dict://dict.org/d:$*" }
-function fileshare() { curl -sF"file=@$*" https://0x0.st | tee /dev/tty | xclip -sel clip }
+function fileshare() { curl -sF"file=@$*" https://0x0.st | xclip -sel clip && echo "$(xclip -o -sel clip) copied" }
