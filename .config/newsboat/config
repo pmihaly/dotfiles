@@ -37,16 +37,12 @@ color info red black bold
 color article white default bold
 
 browser linkhandler
+# to execute a macro press "," then the key set to the macro (eg ",y")
 macro , open-in-browser
-macro t set browser "qndl" ; open-in-browser ; set browser linkhandler
-macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
-macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
+macro y set browser "youtube-dl --add-metadata -ic" ; open-in-browser ; set browser linkhandler
 macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
-macro d set browser "dmenuhandler" ; open-in-browser ; set browser linkhandler
 macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser linkhandler
 macro C set browser "mpv" ; open-in-browser ; set browser linkhandler
-macro p set browser "peertubetorrent %u 480" ; open-in-browser ; set browser linkhandler
-macro P set browser "peertubetorrent %u 1080" ; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
