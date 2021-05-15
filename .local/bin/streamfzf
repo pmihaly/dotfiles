@@ -2,17 +2,9 @@
 
 # Reads twitch urls from file, displays the choices (and uptime if online, 'is offline' if offline) and plays them in mpv using streamlink
 
-fzf \
-    --color=bw \
-    --reverse \
+fzf --color=bw --reverse \
     --preview='echo {} | sed "s/https:\/\/www.twitch.tv\///" | xargs -I, curl -s "https://decapi.me/twitch/uptime/,"' \
-    < ~/sync/streams |
-    xargs \
-        -I{} \
-        streamlink \
-            --twitch-low-latency \
-            -p "devour mpv" \
-            -a "--cache=yes --demuxer-max-bytes=750k" \
-            --title "{author} - {title} ({category})" \
-            {} \
-            best \
+< ~/sync/streams |
+xargs -I{} streamlink --twitch-low-latency -p "devour mpv" \
+    -a "--cache=yes --demuxer-max-bytes=750k" \
+    --title "{author} - {title} ({category})" {} best

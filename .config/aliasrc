@@ -96,7 +96,8 @@ alias \
     mc="make clean" \
     smci="sudo make clean install" \
     gma="gcc -lm main.c && ./a.out" \
-    jf="jftui"
+    jf="jftui" \
+    nt="ping 1.1.1.1" \
 
 # git abbreviations
 alias \
