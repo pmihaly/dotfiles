@@ -51,6 +51,16 @@ call plug#end()
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     set t_Co=256                         " Enable 256 colors
 
+" when using vim as diff
+if &diff
+    " use zR to open all folds
+    set cursorline
+    noremap n ]c
+    noremap N [c
+    noremap l dp<CR>
+    noremap h do<CR>
+endif
+
 " compliation
     map <leader>cm :!markmap "%"<CR>
     map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
