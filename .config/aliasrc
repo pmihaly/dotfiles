@@ -38,9 +38,14 @@ setwallpaper() {
     xdotool key "super+shift+r"
 }
 
-# encrypted drive
+# mount encrypted drive
 tmnt() {
-    sudo cryptsetup open $1 crypt
+    sudo cryptsetup open \
+        $(lsblk -rpo "name,size,type,mountpoint" | \
+            awk '{if ($NF == "part") print $1, $2}' | \
+            fzf --color=bw --reverse --prompt="Select partition to mount > " | \
+            cut -d" " -f1) \
+        crypt
     sudo mount /dev/mapper/crypt /mnt/
 }
 
