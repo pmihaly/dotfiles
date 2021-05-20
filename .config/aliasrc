@@ -16,6 +16,7 @@ done
 
 alias sudo="doas"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias installfrompkgs="a -S --needed - < ~/.config/pkgs"
 
 # Recompiles all suckless stuff
 refr() {
