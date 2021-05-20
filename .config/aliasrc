@@ -15,7 +15,22 @@ for x in mount umount sv pacman updatedb su cryptsetup reboot poweroff; do
 done
 
 alias sudo="doas"
+
+# dotfiles management and shortcuts
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+dfs () {
+    [ $# -eq 0 ] && dotfiles status || dotfiles $@
+}
+alias \
+  dfsa="dotfiles add" \
+  dfsc="dotfiles commit" \
+  dfsac="dotfiles add $1 && dotfiles commit" \
+  dfsp="dotfiles push" \
+  dfspl="dotfiles pull" \
+  dfsd="dotfiles diff" \
+  dfsr="dotfiles restore" \
+  dfsrs="dotfiles restore --staged"
+
 alias installfrompkgs="a -S --needed - < ~/.config/pkgs"
 
 # Recompiles all suckless stuff
@@ -55,21 +70,6 @@ tumnt() {
     sudo cryptsetup close crypt
 }
 
-# dfs shortcut
-dfs () {
-    [ $# -eq 0 ] && dotfiles status || dotfiles $@
-}
-
-alias \
-  dfsa="dotfiles add" \
-  dfsc="dotfiles commit" \
-  dfsac="dotfiles add $1 && dotfiles commit" \
-  dfsp="dotfiles push" \
-  dfspl="dotfiles pull" \
-  dfsd="dotfiles diff" \
-  dfsr="dotfiles restore" \
-  dfsrs="dotfiles restore --staged"
-
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
     cp="cp -iv" \
@@ -90,6 +90,7 @@ alias \
 
 # These common commands are just too long! Abbreviate them.
 alias \
+    j='cd && cd $( sed "1d;s/\$HOME\///g" ~/.config/bookmark-dirs | fzf )' \
     ka="killall" \
     sdn="sudo shutdown -h now" \
     e="$EDITOR" \
