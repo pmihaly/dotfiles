@@ -106,6 +106,7 @@ alias \
     jf="jftui" \
     nt="ping 1.1.1.1" \
     sdl='find -wholename "$HOME/sync/*sync-conflict-*" -delete' \
+    where='grep -iRwo -I *'
 
 # git abbreviations
 alias \
