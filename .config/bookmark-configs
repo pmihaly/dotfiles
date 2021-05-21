@@ -4,6 +4,7 @@
 .config/dmenu/config.h
 .config/dwm/config.h
 .config/lf/lfrc
+.config/lf/scope
 .config/mpv/input.conf
 .config/mpv/mpv.conf
 .config/newsboat/config
