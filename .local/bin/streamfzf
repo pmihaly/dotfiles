@@ -4,7 +4,7 @@
 
 fzf --color=bw \
     --reverse \
-    --preview='echo {} | sed "s/https:\/\/twitch.tv\///" | xargs -I, curl -s "https://decapi.me/twitch/uptime/,"' \
+    --preview='echo {} | sed "s/www.//g ; s/https:\/\/twitch.tv\///" | xargs -I, curl -s "https://decapi.me/twitch/uptime/,"' \
 < ~/sync/streams |
 xargs -I{} streamlink \
     --twitch-low-latency -p "devour mpv" \
