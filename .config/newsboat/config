@@ -33,7 +33,7 @@ color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
-color listfocus white black  standout
+color listfocus blue black standout
 
 browser linkhandler
 # to execute a macro press "," then the key set to the macro (eg ",y")
