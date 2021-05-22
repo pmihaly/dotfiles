@@ -29,9 +29,9 @@ bind-key x pb-delete
 bind-key r reload-all
 bind-key R reload
 
-color listnormal_unread blue default
-color listfocus_unread yellow default bold
-color info red black bold
+color listnormal_unread white default bold
+color listfocus_unread white default bold
+color info black black bold
 color article white default bold
 color listfocus blue black standout
 
