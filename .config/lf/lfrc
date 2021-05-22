@@ -72,9 +72,9 @@ cmd setbg "$1"
 
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
-map J $lf -remote "send $id cd $(sed 's/\$HOME/~/g' ~/.config/bookmark-dirs | fzf)"
+map g $lf -remote "send $id cd $(sed 's/\$HOME/~/g' ~/.config/bookmark-dirs | fzf)"
 map gh
-map g top
+map gg top
 map D delete
 map E extract
 map C copyto
