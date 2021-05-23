@@ -3,9 +3,13 @@ $HOME/.cache
 $HOME/.config
 $HOME/.config/dmenu
 $HOME/.config/dwm
+$HOME/.config/lf
+$HOME/.config/mpv
+$HOME/.config/newsboat
 $HOME/.config/slock
 $HOME/.config/slstatus
 $HOME/.config/st
+$HOME/.config/zsh
 $HOME/.local/bin
 $HOME/.local/share
 $HOME/.local/src
