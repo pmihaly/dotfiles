@@ -1,7 +1,6 @@
 arandr
 atool
 bashtop
-bc
 chafa
 cmake
 devour
@@ -34,6 +33,7 @@ picom-ibhagwan-git
 python-pip
 python-pynvim
 python-pywalfox
+qalc
 ranger
 redshift
 ripgrep
