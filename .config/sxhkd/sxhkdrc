@@ -45,3 +45,6 @@ super + J
 
 super + S
     $TERMINAL -e streamfzf
+
+super + C
+    echo "" | dmenu -p "qalc: " | qalc -t | grep -P "^\s.*" | sed "s/^\s*//" | sed 's/\x1B[@A-Z\\\]^_]\|\x1B\[[0-9:;<=>?]*[-!"#$%&'"'"'()*+,.\/]*[][\\@A-Z^_`a-z{|}~]//g' | dmenu > /dev/null
