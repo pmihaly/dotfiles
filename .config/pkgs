@@ -1,9 +1,11 @@
 arandr
 atool
 bashtop
+catdoc
 chafa
 cmake
 devour
+docx2txt
 ff2mpv-native-messaging-host-git
 ffmpegthumbnailer
 firefox
@@ -26,6 +28,7 @@ nodejs-neovim
 noto-fonts
 noto-fonts-emoji
 npm
+odt2txt
 opendoas
 patch
 pfetch
