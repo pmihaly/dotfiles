@@ -1,15 +1,14 @@
 #!/bin/sh
 
-# quick dmenu frontend for basic, quick qalc usage
+# dmenu "frontend" for qalc
 
-# the sed command does two things:
-# 1. removes whitespace from beginning of the line
-# 2. removes colours to show output in dmenu
+# multiple expressions can be separated by a semicolon
 
 input="$(dmenu -p "qalc: " < /dev/null)"
 
-[ -n "$input" ] && echo "$input" |
-    qalc -t |
-    grep "^\s.*" |
-    sed 's/^\s*// ; s/\x1B[@A-Z\\\]^_]\|\x1B\[[0-9:;<=>?]*[-!"#$%&'"'"'()*+,.\/]*[][\\@A-Z^_`a-z{|}~]//g' |
-    dmenu > /dev/null
+[ -n "$input" ] && echo "$input" |  # only run if user gave something
+    sed "s/\s*;\s*/\n/g" |          # replace semicolon (with optional whitespace around it) with newline
+    qalc -t -c0 -n |                # terse, no color output
+    grep "^\s.*" |                  # select lines starting with whitespace (there is the result)
+    sed 's/^\s*//g' |               # remove whitespace from the beginning of the lines
+    dmenu > /dev/null               # if given multiple expressions, each selectable item is the output of each expression
