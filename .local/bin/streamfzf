@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Reads twitch urls from file, displays the choices (and uptime if online, 'is offline' if offline) and plays them in mpv using streamlink
+# Depends on: ~/sync/streams (newline separated list of twitch stream urls), fzf, curl, streamlink, devour and mpv
 
 fzf --color=bw \
     --reverse \
