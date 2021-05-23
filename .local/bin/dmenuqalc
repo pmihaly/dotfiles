@@ -12,6 +12,6 @@ input="$(dmenu -p "qalc: " -it "$* " < /dev/null)"
     sed "s/\s*;\s*/\n/g" |                                  # replace semicolon (with optional whitespace around it) with newline
     qalc -t -c0 |                                           # terse, no color output
     sed -E "/^(>|$)/d ; s/^\s*//g ; s/\s*(and|or)\s*//g" |  # remove unneeded lines, whitespace, 'and' and 'or'
-    dmenu |                                                 # each item is the result(s) of each expression
+    dmenu -p "answ: " |                                     # each item is the result(s) of each expression
     sed -E "s/[a-zA-Z]\s*(=|≈)\s*//g" |                     # remove variable name and equal sign for further calculations
-    xargs -r -I{} dmenuqalc {}                              # calling this script recursively if a result is selected
+    xargs -r -I{} dmenuqalc {}                              # calling this script recursively
