@@ -31,7 +31,7 @@ bind-key R reload
 
 color listnormal_unread white default bold
 color listfocus_unread white default bold
-color info black black bold
+color info cyan black bold
 color article white default bold
 color listfocus blue black standout
 
