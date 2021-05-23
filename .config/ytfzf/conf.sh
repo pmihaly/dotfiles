@@ -11,5 +11,5 @@ thumbnail_video_info_text () {
          printf "\n${c_blue}Duration     ${c_yellow}%s" "$duration"
          printf "\n${c_blue}Views        ${c_magenta}%s" "$views"
          printf "\n${c_blue}Date         ${c_cyan}%s" "$date"
-         printf "\n${c_blue}URL          ${c_reset}%s" "https://youtube.com/watch?v=$shorturl"
+         printf "\n${c_blue}URL          ${c_magenta}%s" "https://youtube.com/watch?v=$shorturl"
 }
