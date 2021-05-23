@@ -8,11 +8,10 @@
 
 input="$(dmenu -p "qalc: " -it "$* " < /dev/null)"
 
-[ -n "$input" ] && echo "$input" |              # only run if user gave something
-    sed "s/\s*;\s*/\n/g" |                      # replace semicolon (with optional whitespace around it) with newline
-    qalc -t -c0 |                               # terse, no color output
-    grep "^\s.*" |                              # select lines starting with whitespace (there is the result)
-    sed -E "s/^\s*//g ; s/\s*(and|or)\s*//g" |  # remove whitespace from the beginning of the lines and remove any "and" or "or"
-    dmenu |                                     # if given multiple expressions, each selectable item is the output of each expression
-    sed -E "s/[a-zA-Z]\s*(=|≈)\s*//g" |         # remove variable name and equal sign for further calculations
-    xargs -r -I{} dmenuqalc {}                  # calling this script recursively
+[ -n "$input" ] && echo "$input" |                          # only run if user gave something
+    sed "s/\s*;\s*/\n/g" |                                  # replace semicolon (with optional whitespace around it) with newline
+    qalc -t -c0 |                                           # terse, no color output
+    sed -E "/^(>|$)/d ; s/^\s*//g ; s/\s*(and|or)\s*//g" |  # remove unneeded lines, whitespace, 'and' and 'or'
+    dmenu |                                                 # each item is the result(s) of each expression
+    sed -E "s/[a-zA-Z]\s*(=|≈)\s*//g" |                     # remove variable name and equal sign for further calculations
+    xargs -r -I{} dmenuqalc {}                              # calling this script recursively if a result is selected
