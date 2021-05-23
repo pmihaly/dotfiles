@@ -108,9 +108,6 @@ alias \
     sdl='pushd ~/sync && find -name "*sync-conflict-*" -delete && popd' \
     where='grep -iRwo -I *'
 
-function calc() { qalc -t "$*" }
-
-
 # git abbreviations
 alias \
     g="git" \

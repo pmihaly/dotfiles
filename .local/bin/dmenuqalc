@@ -1,14 +1,18 @@
 #!/bin/sh
 
 # dmenu "frontend" for qalc
+# depends on: dmenu (with initial text patch) and qalc
 
 # multiple expressions can be separated by a semicolon
+# you can do further calculations with the result by selecting it, or you can exit with ESC
 
-input="$(dmenu -p "qalc: " < /dev/null)"
+input="$(dmenu -p "qalc: " -it "$* " < /dev/null)"
 
-[ -n "$input" ] && echo "$input" |  # only run if user gave something
-    sed "s/\s*;\s*/\n/g" |          # replace semicolon (with optional whitespace around it) with newline
-    qalc -t -c0 -n |                # terse, no color output
-    grep "^\s.*" |                  # select lines starting with whitespace (there is the result)
-    sed 's/^\s*//g' |               # remove whitespace from the beginning of the lines
-    dmenu > /dev/null               # if given multiple expressions, each selectable item is the output of each expression
+[ -n "$input" ] && echo "$input" |              # only run if user gave something
+    sed "s/\s*;\s*/\n/g" |                      # replace semicolon (with optional whitespace around it) with newline
+    qalc -t -c0 |                               # terse, no color output
+    grep "^\s.*" |                              # select lines starting with whitespace (there is the result)
+    sed -E "s/^\s*//g ; s/\s*(and|or)\s*//g" |  # remove whitespace from the beginning of the lines and remove any "and" or "or"
+    dmenu |                                     # if given multiple expressions, each selectable item is the output of each expression
+    sed -E "s/[a-zA-Z]\s*(=|≈)\s*//g" |         # remove variable name and equal sign for further calculations
+    xargs -r -I{} dmenuqalc {}                  # calling this script recursively
