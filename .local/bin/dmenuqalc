@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# quick dmenu frontend for basic, quick qalc usage
+
+# the sed command does two things:
+# 1. removes whitespace from beginning of the line
+# 2. removes colours to show output in dmenu
+
+input="$(dmenu -p "qalc: " < /dev/null)"
+
+[ -n "$input" ] && echo "$input" |
+    qalc -t |
+    grep "^\s.*" |
+    sed 's/^\s*// ; s/\x1B[@A-Z\\\]^_]\|\x1B\[[0-9:;<=>?]*[-!"#$%&'"'"'()*+,.\/]*[][\\@A-Z^_`a-z{|}~]//g' |
+    dmenu > /dev/null
