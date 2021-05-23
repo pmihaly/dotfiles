@@ -1,50 +1,22 @@
-super + w
-    $BROWSER
+# gui programs
+super + {w, i, C}
+    {firefox, dmenuunicode, dmenuqalc}
 
-super + x
-    slock
+# terminal programs
+super + {a, e, r, v, p}
+    $TERMINAL -e {pulsemixer, neomutt, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf}
 
-super + shift + x
-    poweroff
+# content consooming
+super + {n, y, J, S}
+    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, jftui, streamfzf}
 
-super + a
-    $TERMINAL -e pulsemixer
+# dotfiles obsession
+super + {c, s}
+    $TERMINAL -e {configfzf, scriptfzf}
 
-super + r
-    $TERMINAL -e $FILEBROWSER
-
-super + e
-    $TERMINAL -e neomutt
+# system programs
+super + {x, X}
+    {slock, poweroff}
 
 Print
     scrot
-
-super + y
-    $TERMINAL -e ytfzf -lt
-
-super + v
-    $TERMINAL -e $EDITOR -c VimwikiIndex
-
-super + i
-    dmenuunicode
-
-super + n
-    $TERMINAL -e newsboat -c ~/sync/newsboat-cache
-
-super + c
-    $TERMINAL -e ~/.local/bin/configfzf
-
-super + s
-    $TERMINAL -e ~/.local/bin/scriptfzf
-
-super + p
-    $TERMINAL -e ~/.local/bin/projectfzf
-
-super + J
-    $TERMINAL -e jftui
-
-super + S
-    $TERMINAL -e streamfzf
-
-super + C
-   dmenuqalc
