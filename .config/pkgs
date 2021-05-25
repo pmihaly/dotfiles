@@ -6,6 +6,7 @@ chafa
 cmake
 devour
 docx2txt
+dunst
 ff2mpv-native-messaging-host-git
 ffmpegthumbnailer
 firefox
@@ -18,6 +19,7 @@ jq
 keepassxc
 lazygit
 lf-bin
+libnotify
 libqalculate
 libxft-bgra
 mediainfo
