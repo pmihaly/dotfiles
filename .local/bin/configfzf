@@ -1,6 +1,7 @@
 #!/bin/sh
 
+echo "fzf: $FZF_DEFAULT_OPTS" > ~/lol
 
-fzf --color=bw --reverse < ~/.config/bookmark-configs |
+fzf < ~/.config/bookmark-configs |
     cut -d" " -f2- |
     xargs -I{} sh -c "$EDITOR $HOME/{}"

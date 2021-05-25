@@ -11,7 +11,8 @@ export BROWSER='/usr/bin/firefox'
 export FILEBROWSER='/usr/bin/lf'
 export TERMINAL='/usr/local/bin/st'
 
-[ -f "~/.cache/wal/colors-tty.sh" ] && . "~/.cache/wal/colors-tty.sh"
+[ -f "$HOME/.cache/wal/colors-tty.sh" ] && . "$HOME/.cache/wal/colors-tty.sh"
+[ -f "$HOME/.cache/wal/colors.sh" ] && . "$HOME/.cache/wal/colors.sh"
 
 export TERM=st-256color
 
@@ -47,7 +48,7 @@ export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/config"
 export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
 
 # Other program settings:
-export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
+export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} --layout=reverse"
 export LESS=-R
 export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
 export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
