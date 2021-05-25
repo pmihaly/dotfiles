@@ -18,8 +18,8 @@ super + {c, s}
     $TERMINAL -e {configfzf, scriptfzf}
 
 # system
-super + {x, X}
-    {slock, poweroff}
+super + {W, x, X}
+    {dmenuwifi, slock, poweroff}
 
 Print
     scrot
