@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "fzf: $FZF_DEFAULT_OPTS" > ~/lol
-
 fzf < ~/.config/bookmark-configs |
     cut -d" " -f2- |
     xargs -I{} sh -c "$EDITOR $HOME/{}"
