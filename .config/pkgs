@@ -18,6 +18,7 @@ jq
 keepassxc
 lazygit
 lf-bin
+libqalculate
 libxft-bgra
 mediainfo
 mpv-vapoursynth-git
@@ -36,7 +37,6 @@ picom-ibhagwan-git
 python-pip
 python-pynvim
 python-pywalfox
-qalc
 ranger
 redshift
 ripgrep
