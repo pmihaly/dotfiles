@@ -3,8 +3,11 @@ super + {w, i, C}
     {firefox, dmenuunicode, dmenuqalc}
 
 # terminal programs
-super + {a, e, r, v, p}
-    $TERMINAL -e {pulsemixer, neomutt, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf}
+super + {a, r, v, p}
+    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf}
+
+super + e
+    mw -Y & $TERMINAL -e neomutt
 
 # content consooming
 super + {n, y, J, S}
@@ -14,7 +17,7 @@ super + {n, y, J, S}
 super + {c, s}
     $TERMINAL -e {configfzf, scriptfzf}
 
-# system programs
+# system
 super + {x, X}
     {slock, poweroff}
 
