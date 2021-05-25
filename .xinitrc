@@ -7,6 +7,7 @@ xset r rate 300 50 &
 picom -b &
 
 slstatus &
+dunst &
 sxhkd &
 shopt -u -o history &
 eval "$(ssh-agent -s)" &
