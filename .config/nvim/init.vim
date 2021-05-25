@@ -10,6 +10,7 @@ endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
@@ -240,7 +241,10 @@ endif
 	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 
 " sxhkd
-    autocmd BufWritePost sxhkdrc !killall -q sxhkd;setsid -f sxhkd
+    autocmd BufWritePost sxhkdrc !killall -q sxhkd; sxhkd &
+
+" wal templates
+    autocmd BufWritePost *wal/templates/* !wal -c;wal -R;wal -R
 
 " sorting
 	autocmd BufWritePre ~/.config/pkgs,~/.config/bookmark-configs,~/.config/bookmark-dirs,~/sync/streams :sort
