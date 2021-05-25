@@ -1,7 +1,7 @@
 setxkbmap -layout hu &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
 # wal -n -i ~/.config/wallpaper.jpg &
-wal -R &
+wal -R -n &
 xwallpaper --zoom ~/.config/wallpaper.jpg &
 xset r rate 300 50 &
 picom -b &
