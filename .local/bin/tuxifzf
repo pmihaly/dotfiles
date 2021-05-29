@@ -1,0 +1,3 @@
+#!/bin/sh
+
+fzf --print-query --no-info --prompt "Google search> " < /dev/null | tuxi ; read lmao

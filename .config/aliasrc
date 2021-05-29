@@ -83,6 +83,8 @@ alias \
     yts="ytfzf -st" \
     cal="cal $(date +'%Y')"
 
+function youtube-dl() { /usr/bin/youtube-dl "$*" && notify-send "💾 Videó letöltve"}
+
 # Colorize commands when possible.
 alias \
     ls="ls -hN --color=auto --group-directories-first" \
