@@ -21,7 +21,8 @@ try_to_connect_with_password() {
 
 try_to_connect_from_profile() {
     # ..., but nmcli returns 1 when erroring out while trying to use a profile (e.g. profile does not exist, or wrong password)
-    (notify-send -t 3000 "📡 Csatlkakozás $1 hálózatra..." && nmcli c up "$1") || try_to_connect_with_password "$1"
+    notify-send -t 3000 "📡 Csatlkakozás $1 hálózatra..."
+    nmcli c up "$1" || try_to_connect_with_password "$1"
 }
 
 [ -n "$selected_wifi_ssid" ] && try_to_connect_from_profile "$selected_wifi_ssid"
