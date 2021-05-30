@@ -18,7 +18,7 @@ super + {c, s}
     $TERMINAL -e {configfzf, scriptfzf}
 
 # system
-super + {W, x, X,}
+super + {W, x, X}
     {dmenuwifi, slock, poweroff}
 
 # screenshot
