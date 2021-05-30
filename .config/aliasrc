@@ -33,29 +33,6 @@ alias \
 
 alias installfrompkgs="a -S --needed - < ~/.config/pkgs"
 
-# Recompiles all suckless stuff
-refr() {
-    pushd .
-    for d in {dwm,st,slstatus,slock,dmenu}
-        do cd ~/.config/"$d" && sudo make clean install
-    done
-    popd || exit
-}
-
-# Sets wallpaper, compiles colorscheme and recompiles suckless stuff
-# If no wallpaper was given, it resets to
-setwallpaper() {
-    WALLPAPER=~/.config/wallpaper.jpg
-    [ -z "$1" ] || cp "$1" $WALLPAPER
-    killall -q dunst
-    wal -c
-    wal -n -i $WALLPAPER
-    dunst &
-    xwallpaper --zoom $WALLPAPER &&
-    refr &&
-    xdotool key "super+shift+r"
-}
-
 # mount encrypted drive
 tmnt() {
     sudo cryptsetup open \
@@ -96,7 +73,6 @@ alias \
 
 # These common commands are just too long! Abbreviate them.
 alias \
-    j='cd && cd $( sed "1d;s/\$HOME\///g" ~/.config/bookmark-dirs | fzf )' \
     ka="killall" \
     sdn="sudo shutdown -h now" \
     e="$EDITOR" \
@@ -113,6 +89,10 @@ alias \
     nt="ping 1.1.1.1" \
     sdl='pushd ~/sync && find -name "*sync-conflict-*" -delete && popd' \
     where='grep -iRwo -I *'
+
+j() {
+    cd "$HOME" && cd "$( sed "1d;s/\$HOME\///g" ~/.config/bookmark-dirs | fzf -q $* )"
+}
 
 # git abbreviations
 alias \

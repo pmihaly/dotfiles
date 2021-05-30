@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Sets wallpaper, compiles colorscheme and recompiles suckless stuff
+# If no wallpaper was given, it compiles the colorscheme for the current wallpaper
+
+WALLPAPER=~/.config/wallpaper.jpg
+[ -z "$1" ] || cp "$1" $WALLPAPER
+killall -q dunst
+wal -c
+wal -n -i $WALLPAPER
+dunst &
+xwallpaper --zoom $WALLPAPER &&
+refr

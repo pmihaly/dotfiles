@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+
+# Recompiles all suckless stuff
+pwd="$(pwd)"
+for d in {dwm,st,slstatus,slock,dmenu}
+    do cd ~/.config/"$d" && sudo make clean install
+done
+cd "$pwd" || exit
+xdotool key "super+shift+r"
