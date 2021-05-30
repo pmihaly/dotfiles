@@ -37,16 +37,16 @@ alias installfrompkgs="a -S --needed - < ~/.config/pkgs"
 refr() {
     pushd .
     for d in {dwm,st,slstatus,slock,dmenu}
-        do cd ~/.config/$d && sudo make clean install
+        do cd ~/.config/"$d" && sudo make clean install
     done
-    popd
+    popd || exit
 }
 
 # Sets wallpaper, compiles colorscheme and recompiles suckless stuff
 # If no wallpaper was given, it resets to
 setwallpaper() {
     WALLPAPER=~/.config/wallpaper.jpg
-    [ -z $1 ] || cp $1 $WALLPAPER
+    [ -z "$1" ] || cp "$1" $WALLPAPER
     killall -q dunst
     wal -c
     wal -n -i $WALLPAPER
@@ -83,7 +83,9 @@ alias \
     yts="ytfzf -st" \
     cal="cal $(date +'%Y')"
 
-function youtube-dl() { /usr/bin/youtube-dl "$*" && notify-send "💾 Videó letöltve"}
+youtube-dl() {
+    /usr/bin/youtube-dl "$*" && notify-send "💾 Videó letöltve"
+}
 
 # Colorize commands when possible.
 alias \
@@ -149,13 +151,23 @@ alias \
     strf="streamfzf"
 
 # translation
-function tk() { trans "$*" }
-function tm() { trans -t 'en+de' "$*" }
+tk() {
+    trans "$*"
+}
+tm() {
+    trans -t 'en+de' "$*"
+}
 
 # curl websites shortcut
 alias \
     weather="curl wttr.in"
 
-function cheat() { curl "cheat.sh/$*" }
-function dict() { curl "dict://dict.org/d:$*" }
-function fileshare() { curl -sF"file=@$*" https://0x0.st | xclip -sel clip && echo "$(xclip -o -sel clip) copied" }
+cheat() {
+    curl "cheat.sh/$*"
+}
+dict() {
+    curl "dict://dict.org/d:$*"
+}
+fileshare() {
+    curl -sF"file=@$*" https://0x0.st | xclip -sel clip && echo "$(xclip -o -sel clip) copied"
+}
