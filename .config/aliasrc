@@ -47,9 +47,9 @@ refr() {
 setwallpaper() {
     WALLPAPER=~/.config/wallpaper.jpg
     [ -z $1 ] || cp $1 $WALLPAPER
-    ka dunst
+    killall -q dunst
     wal -c
-    wal -n -i $WALLPAPER &&
+    wal -n -i $WALLPAPER
     dunst &
     xwallpaper --zoom $WALLPAPER &&
     refr &&
