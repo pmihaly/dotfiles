@@ -14,4 +14,4 @@ input="$(dmenu -p "qalc: " -it "$* " < /dev/null)"
     sed -E "/^(>|$)/d ; s/^\s*//g ; s/\s*(and|or)\s*//g" |  # remove unneeded lines, whitespace, 'and' and 'or'
     dmenu -p "answ: " |                                     # each item is the result(s) of each expression
     sed -E "s/[a-zA-Z]\s*(=|≈|>|<|≥|≤)\s*//g" |             # remove variable name and signs for further calculations
-    xargs -r -I{} dmenuqalc {}                              # calling this script recursively
+    xargs -r -I{} $0 {}                                     # calling this script recursively
