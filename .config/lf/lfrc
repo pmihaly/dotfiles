@@ -2,15 +2,12 @@
 
 # Basic vars
 set shell zsh
-set shellopts '-eu'
+# set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
 # set icons
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
-
-# Vars that depend on environmental variables
-# $lf -remote "send $id set previewer .config/lf/scope"
 
 set preview true
 set previewer ~/.config/lf/previewer
@@ -37,7 +34,7 @@ cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	printf "%s\n\t" "$fx"
-	printf "extract?[y/N]"
+	printf "extract?[y/N] "
 	read ans
 	[ $ans = "y" ] && ext $fx
 }}
@@ -48,7 +45,8 @@ cmd delete ${{
 	printf "%s\n\t" "$fx"
 	printf "delete?[y/N]"
 	read ans
-	[ $ans = "y" ] && rm -rf -- $fx
+	[ "$ans" = "y" ] && echo "$fx" | tr ' ' '\ ' | xargs -I{} rm -rf -- "{}"
+
 }}
 
 cmd moveto ${{
