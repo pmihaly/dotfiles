@@ -20,10 +20,6 @@ export TERM=st-256color
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_DESKTOP_DIR="$XDG_DOWNLOAD_DIR"
-export XDG_DOCUMENTS_DIR="$HOME/docs"
-export XDG_DOWNLOAD_DIR="$HOME/dl"
-export XDG_PICTURES_DIR="$HOME/pics"
 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
