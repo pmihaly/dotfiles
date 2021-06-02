@@ -1,8 +1,7 @@
-# Luke's lf settings
+# Based on Luke's lf settings
 
 # Basic vars
 set shell zsh
-# set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
 # set icons
@@ -36,14 +35,14 @@ cmd extract ${{
 	printf "%s\n\t" "$fx"
 	printf "extract?[y/N] "
 	read ans
-	[ $ans = "y" ] && ext $fx
+	[ "$ans" = "y" ] && ext "$fx"
 }}
 
 cmd delete ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	printf "%s\n\t" "$fx"
-	printf "delete?[y/N]"
+	printf "delete?[y/N] "
 	read ans
 	[ "$ans" = "y" ] && echo "$fx" | tr ' ' '\ ' | xargs -I{} rm -rf -- "{}"
 
@@ -52,9 +51,8 @@ cmd delete ${{
 cmd moveto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
-	clear; echo "Move to where?"
-	dest="$(cut -d' ' -f2- ~/.config/bookmark-dirs | fzf)" &&
-	for x in $fx; do
+	dest="$(fzf < ~/.config/bookmark-dirs)" &&
+    echo "$fx" | while IFS= read -r x; do
 		eval mv -iv \"$x\" \"$dest\"
 	done
 }}
@@ -62,9 +60,8 @@ cmd moveto ${{
 cmd copyto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
-	clear; echo "Copy to where?"
-	dest="$(cut -d' ' -f2- ~/.config/bookmark-dirs | fzf)" &&
-	for x in $fx; do
+	dest="$(fzf < ~/.config/bookmark-dirs)" &&
+    echo "$fx" | while IFS= read -r x; do
 		eval cp -ivr \"$x\" \"$dest\"
 	done
 }}
