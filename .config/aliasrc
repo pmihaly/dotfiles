@@ -69,7 +69,8 @@ alias \
     ls="ls -hN --color=auto --group-directories-first" \
     grep="grep --color=auto" \
     diff="diff --color=auto" \
-    ccat="highlight --out-format=ansi"
+    ccat="highlight --out-format=ansi" \
+    pacman="pacman --color auto"
 
 # These common commands are just too long! Abbreviate them.
 alias \
@@ -80,7 +81,6 @@ alias \
     p="sudo pacman" \
     z="zathura" \
     rs="ka sxhkd ; sxhkd &" \
-    p="sudo pacman" \
     a="paru" \
     mc="make clean" \
     smci="sudo make clean install" \
