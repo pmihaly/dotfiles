@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
@@ -91,7 +90,7 @@ alias \
     where='grep -iRwo -I *'
 
 j() {
-    cd "$HOME" && cd "$( sed "1d;s/\$HOME\///g" ~/.config/bookmark-dirs | fzf -q $* )"
+    cd "$HOME" && cd "$( sed "1d;s/\$HOME\///g" ~/.config/bookmark-dirs | fzf -1 -q "$*" )"
 }
 
 # git abbreviations
