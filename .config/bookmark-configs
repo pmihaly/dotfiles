@@ -16,6 +16,7 @@
 .config/slstatus/config.h
 .config/st/config.h
 .config/sxhkd/sxhkdrc
+.config/user-dirs.dirs
 .config/wal/templates/dunstrc
 .config/wal/templates/zathurarc
 .config/ytfzf/conf.sh
