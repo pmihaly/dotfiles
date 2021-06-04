@@ -5,4 +5,4 @@
 
 input="$(dmenu -p "trans: " </dev/null)"
 
-trans -b -s "en+de" "$input" | sed "/$input/d" | uniq | dmenu >/dev/null
+[ -n "$input" ] && trans -b -s "en+de" "$input" | sed "/$input/d" | uniq | dmenu >/dev/null
