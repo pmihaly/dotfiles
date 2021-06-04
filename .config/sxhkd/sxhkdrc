@@ -1,6 +1,6 @@
 # gui programs
-super + {w, i, C}
-    {firefox, dmenuunicode, dmenuqalc}
+super + {w, i, C, t}
+    {firefox, dmenuunicode, dmenuqalc, dmenutrans}
 
 # terminal programs
 super + {a, r, v, o, g}

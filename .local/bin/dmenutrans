@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Translates english and german to system default language
+# Depends on: dmenu, translate-shell
+
+input="$(dmenu -p "trans: " </dev/null)"
+
+trans -b -s "en+de" "$input" | sed "/$input/d" | dmenu >/dev/null
