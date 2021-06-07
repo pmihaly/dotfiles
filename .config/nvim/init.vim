@@ -160,7 +160,6 @@ endif
     command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 	map <leader><space> :Files<CR>
-	" map <leader>r :Rg<CR>
 	map <leader>r :RG<CR>
 
 " vimwiki
