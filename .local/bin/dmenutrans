@@ -1,8 +1,10 @@
 #!/bin/sh
 
 # Translates english and german to system default language
-# Depends on: dmenu, translate-shell
+# When a translation is selected, displays a dictionary definition (in english)
+# Depends on: curl, dmenu, and translate-shell
 
 input="$(dmenu -p "trans: " </dev/null)"
 
-[ -n "$input" ] && trans -b -s "en+de" "$input" | sed "/$input/d" | uniq | dmenu >/dev/null
+[ -n "$input" ] && trans -b -s "en+de" "$input" | sed "/$input/d" | uniq | dmenu \
+&& curl "dict://dict.org/d:$input" | sed -E "s/.$//g ; /^[0-9]+/d ; /^\./d" | dmenu -l 30 2>/dev/null
