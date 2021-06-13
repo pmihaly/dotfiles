@@ -246,10 +246,10 @@ endif
     autocmd BufWritePost *wal/templates/* !wal -c;wal -R;wal -R
 
 " sorting
-	autocmd BufWritePre ~/.config/pkgs,~/.config/bookmark-configs,~/.config/bookmark-dirs,~/sync/streams :sort
+	autocmd BufWritePre ~/.config/pkgs,~/.config/bookmark-configs,~/.config/bookmark-dirs,~/sync/streams :sort i
 
 " newsboat urls sorting
-    autocmd BufWritePre ~/.config/newsboat/urls :sort /.*youtube.com.* # /
+    autocmd BufWritePre ~/.config/newsboat/urls :sort i /.*youtube.com.* # /
 
 " slstatus rerun
     autocmd BufWritePost ~/.config/slstatus/config.h :terminal cd ~/.config/slstatus/ && sudo make install && { killall -q slstatus;setsid -f slstatus }
