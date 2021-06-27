@@ -20,7 +20,7 @@
     idle_threshold = 120
 
     # Font and typography settings
-    font = Iosevka Term 11
+    font = Iosevka 11
     alignment = center
     word_wrap = yes
 
