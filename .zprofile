@@ -1,8 +1,6 @@
 # profile file. Runs on login. Environmental variables are set here.
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 
-unsetopt PROMPT_SP
-
 
 # Default programs
 export EDITOR='/usr/bin/nvim'
@@ -20,6 +18,15 @@ export TERM=st-256color
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+
+export XDG_DESKTOP_DIR="$HOME/"
+export XDG_DOCUMENTS_DIR="$HOME/docs"
+export XDG_DOWNLOAD_DIR="$HOME/dl"
+export XDG_PICTURES_DIR="$HOME/pics"
+export XDG_TEMPLATES_DIR="$HOME/dl"
+export XDG_PUBLICSHARE_DIR="$HOME/dl"
+export XDG_MUSIC_DIR="$HOME/"
+export XDG_VIDEOS_DIR="$HOME/dl"
 
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
@@ -64,7 +71,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 # Autostart ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
-function start_agent {
+start_agent() {
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
@@ -82,4 +89,4 @@ else
 fi
 
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+[ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ] && exec startx
