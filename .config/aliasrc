@@ -83,7 +83,8 @@ alias \
     jf="jftui" \
     nt="ping 1.1.1.1" \
     sdl='pushd ~/sync && find -name "*sync-conflict-*" -delete && popd' \
-    where='grep -iRwo -I *'
+    where='grep -iRwo -I *' \
+    ytd="youtube-dl -f '[vcodec!=?VP9]'"
 
 j() {
     cd "$HOME" && cd "$( sed "1d;s/\$HOME\///g" ~/.config/bookmark-dirs | fzf -1 -q "$*" )"
