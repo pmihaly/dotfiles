@@ -39,7 +39,7 @@ browser linkhandler
 # to execute a macro press "," then the key set to the macro (eg ",y")
 macro , open-in-browser
 macro y set browser "(notify-send '💾 Videó letöltése...' ; (youtube-dl -f 'bestvideo[height<=?1080][vcodec!=?vp9]+bestaudio/best'--add-metadata -ic %u >/dev/null && notify-send '💾 ✅ Videó letöltve') || notify-send '💾 ❗ Videó letöltés sikertelen')&" ; open-in-browser ; set browser linkhandler
-macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
+macro w set browser "$BROWSER %u &" ; open-in-browser ; set browser linkhandler
 macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser linkhandler
 macro C set browser "mpv" ; open-in-browser ; set browser linkhandler
 
