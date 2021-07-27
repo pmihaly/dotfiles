@@ -68,6 +68,7 @@ endif
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
     map <leader>csh :!clear && shellcheck -x %<CR>
     map <leader>csl :terminal sudo make install<CR>
+    map <leader>cst :!devour sent %<CR>
 
 " insertion
     map <leader>ic :-1r!curl -s http://whatthecommit.com/index.txt<CR>
