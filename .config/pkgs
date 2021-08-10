@@ -62,10 +62,10 @@ w3m
 wxgtk-common
 xcape
 xclip
-xdg-user-dir
+xdg-user-dirs
 xdotool
 xwallpaper
-yt-dlp
+yt-dlp-git
 ytfzf
 zathura
 zathura-pdf-mupdf
