@@ -5,7 +5,7 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 # Default programs
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
-export BROWSER='/usr/bin/firefox'
+export BROWSER='/usr/bin/brave'
 export FILEBROWSER='/usr/bin/lf'
 export TERMINAL='/usr/local/bin/st'
 
