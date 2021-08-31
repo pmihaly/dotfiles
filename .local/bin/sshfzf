@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Quickly connect by ssh to any server specified in ~/sync/servers, also checking their status in the preview
+# Depends on: ~/sync/servers (newline separated list of 'username@hostname'), fzf and netcat
+
+fzf  --preview='sed "s/.*@//g" <<< {} | xargs -d "\n" -I{} nc -z {} 22 && echo "🟢 Online" || echo "🔴 Offline (check on port 22 failed)"' \
+< ~/sync/servers |
+xargs -I{} ssh -tt "{}"
