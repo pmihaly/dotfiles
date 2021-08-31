@@ -1,17 +1,17 @@
 # gui programs
 super + {w, i, C, t}
-    {firefox, dmenuunicode, dmenuqalc, dmenutrans}
+    {$BROWSER, dmenuunicode, dmenuqalc, dmenutrans}
 
 # terminal programs
-super + {a, r, v, o, g}
-    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf, tuxifzf}
+super + {a, r, v, o, g, S}
+    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf, tuxifzf, sshfzf}
 
 super + e
     mw -Y & $TERMINAL -e neomutt
 
 # content consooming
-super + {n, y, Y, J, S, m}
-    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, ytfzf -ltd, jftui, streamfzf, setsid -f linkhandler "$(xclip -o)"}
+super + {n, y, Y, J, m}
+    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, ytfzf -ltd, jftui, setsid -f linkhandler "$(xclip -o)"}
 
 # dotfiles obsession
 super + {c, s}
