@@ -16,6 +16,7 @@ gcc
 highlight
 htop
 httpie
+img2pdf
 jq
 keepassxc
 lazygit
@@ -33,6 +34,7 @@ nodejs-neovim
 noto-fonts
 noto-fonts-emoji
 npm
+ocrmypdf
 odt2txt
 opendoas
 patch
@@ -50,6 +52,9 @@ streamlink
 sxhkd
 sxiv
 syncthing
+tesseract-data-deu
+tesseract-data-eng
+tesseract-data-hun
 tmux
 translate-shell
 ttf-iosevka

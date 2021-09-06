@@ -67,6 +67,16 @@ cmd copyto ${{
 	done
 }}
 
+
+cmd convimagestopdf ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "Convert file(s) to (.pdf will be added): "
+    read ans
+    img2pdf $fx | ocrmypdf -l hun+eng+deu - "$ans.pdf"
+}}
+
+
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map g $lf -remote "send $id cd $(sed 's/\$HOME/~/g' ~/.config/bookmark-dirs | fzf)"
@@ -94,6 +104,7 @@ map a push A<a-b> # after extention
 map B $printf '%s\n' $fx | vidir -
 map b $setwallpaper $fx
 map S !$SHELL
+map <c-p> convimagestopdf
 
 map <c-e> down
 map <c-y> up
