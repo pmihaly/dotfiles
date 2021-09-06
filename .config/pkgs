@@ -27,7 +27,7 @@ libxft-bgra
 maim
 mediainfo
 mpv
-mutt-wizard
+mutt-wizard-git
 newsboat
 nodejs
 nodejs-neovim
@@ -44,6 +44,7 @@ prettier
 python-pip
 python-pynvim
 python-pywalfox
+python-sortedcontainers
 ranger
 redshift
 ripgrep
