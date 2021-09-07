@@ -77,6 +77,19 @@ cmd convimagestopdf ${{
 }}
 
 
+cmd searchpdfs ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+    find -name "*.pdf" \
+        | awk 'BEGIN {FS="\t"; OFS="\t"}; {command="pdftotext -f 1 -l 1 \""$0"\" - 2>/dev/null | tr \"\n\" \"_\" "; command|getline d; close(command); print $0, d}' \
+        | fzf -e \
+        | awk 'BEGIN {FS="\t"; OFS="\t"}; {print $1}' \
+        | xargs -I{} devour zathura "{}"
+}}
+
+
+
+
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map g $lf -remote "send $id cd $(sed 's/\$HOME/~/g' ~/.config/bookmark-dirs | fzf)"
@@ -105,6 +118,7 @@ map B $printf '%s\n' $fx | vidir -
 map b $setwallpaper $fx
 map S !$SHELL
 map <c-p> convimagestopdf
+map <c-o> searchpdfs
 
 map <c-e> down
 map <c-y> up
