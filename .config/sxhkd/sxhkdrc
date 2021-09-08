@@ -4,14 +4,14 @@ super + {w, i, C, t}
 
 # terminal programs
 super + {a, r, v, o, g, S}
-    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf, tuxifzf, sshfzf}
+    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf, tuxifzf, streamfzf}
 
 super + e
     mw -Y & $TERMINAL -e neomutt
 
 # content consooming
 super + {n, y, Y, J, m}
-    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, ytfzf -ltd, jftui, setsid -f linkhandler "$(xclip -o)"}
+    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, ytfzf -ltd, jftui, linkhandler "$(xclip -o)"}
 
 # dotfiles obsession
 super + {c, s}
