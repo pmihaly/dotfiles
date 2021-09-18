@@ -63,8 +63,8 @@ endif
 
 " compliation/formatting
     map <leader>cm :!markmap "%"<CR>
-    " convert through latex
-    map <leader>cp :w \| Spawn! pandoc --pdf-engine=xelatex "%" -o "%.pdf" & pidof zathura \|\| zathura "%.pdf"<CR>
+    " convert through latex asynchronously if possible
+    map <leader>cp :w \| Spawn! [ -e "%.pdf" ] && (pandoc --pdf-engine=xelatex "%" -o "%.pdf" & pidof zathura \|\| zathura "%.pdf") \|\| (pandoc --pdf-engine=xelatex "%" -o "%.pdf" && pidof zathura \|\| zathura "%.pdf") <CR>
     " convert through groff
     map <leader>cgp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
