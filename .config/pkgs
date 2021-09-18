@@ -37,6 +37,7 @@ npm
 ocrmypdf
 odt2txt
 opendoas
+pandoc
 patch
 pfetch
 picom-ibhagwan-git
@@ -56,6 +57,7 @@ syncthing
 tesseract-data-deu
 tesseract-data-eng
 tesseract-data-hun
+texlive-most
 tmux
 translate-shell
 ttf-iosevka

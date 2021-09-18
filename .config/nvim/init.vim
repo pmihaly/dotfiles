@@ -15,6 +15,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
 Plug 'ap/vim-css-color'
 
 Plug 'dylanaraps/wal.vim'
@@ -62,10 +63,13 @@ endif
 
 " compliation/formatting
     map <leader>cm :!markmap "%"<CR>
-    map <leader>cp :!pandoc -t ms "%" -o "%.pdf"<CR>
+    " convert through latex
+    map <leader>cp :w \| Spawn! pandoc --pdf-engine=xelatex "%" -o "%.pdf" & pidof zathura \|\| zathura "%.pdf"<CR>
+    " convert through groff
+    map <leader>cgp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
     map <leader>csh :!clear && shellcheck -x %<CR>
-    map <leader>csl :terminal sudo make install<CR>
+    map <leader>csl :Spawn sudo make install<CR>
     map <leader>cst :!devour sent "%"<CR>
     map <leader>cf :!prettier -w "%"<CR>
 
@@ -217,6 +221,9 @@ endif
 
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
+
+" Open path in new split
+    map gf :vertical wincmd f<CR>
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
