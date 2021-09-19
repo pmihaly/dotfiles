@@ -70,6 +70,7 @@ endif
     " convert through groff
     map <leader>cgp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
+    map <leader>cpp :w \| !fpc -o"%.out" "%" && ./%.out<CR>
     map <leader>csh :!clear && shellcheck -x %<CR>
     map <leader>csl :Spawn sudo make install<CR>
     map <leader>cst :!devour sent "%"<CR>
