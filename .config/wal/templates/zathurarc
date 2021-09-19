@@ -11,6 +11,8 @@ set render-loading "false"  # Do not show the "loading" text
 set scroll-step    "120"    # Increase the scroll distance when using j/k
 set recolor        "true"   # Use our theme colors (<C-r> for the original document colors)
 
+set selection-clipboard clipboard
+
 # [colors]
 set default-bg                     "{background}"
 set default-fg                     "{foreground}"
