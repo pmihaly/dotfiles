@@ -83,6 +83,7 @@ alias \
     jf="jftui" \
     nt="ping 1.1.1.1" \
     sdl='pushd ~/sync && find -name "*sync-conflict-*" -delete && popd' \
+    svpd='rm -rf ~/sync/vimwiki/*.pdf' \
     where='grep -iRwo -I *' \
     ytd="youtube-dl -f '[vcodec!=?VP9]'"
 
