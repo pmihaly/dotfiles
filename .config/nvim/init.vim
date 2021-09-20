@@ -78,6 +78,7 @@ endif
 
 " insertion
     map <leader>ic :-1r!curl -s http://whatthecommit.com/index.txt<CR>
+    map <leader>iq :-1r!pandoc https://dailystoic.pappmihaly.com --to gfm -o /dev/stdout<CR>
 
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
