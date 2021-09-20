@@ -13,7 +13,7 @@ shopt -u -o history &
 eval "$(ssh-agent -s)" &
 unclutter 3 &
 keepassxc &
-redshift -P -t 5700:2500 -l 47.29:19.2 -b 0.7:0.5 &
+redshift -P -t 1000:2500 -l 47.29:19.2 -b 0.7:0.5 &
 [[ `pgrep syncthing` ]] || syncthing -no-browser &
 
 (sleep 1 && xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape') &
