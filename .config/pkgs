@@ -51,7 +51,6 @@ python-sortedcontainers
 ranger
 redshift
 ripgrep
-roboto
 shellcheck
 streamlink
 sxhkd
@@ -64,6 +63,7 @@ texlive-most
 tmux
 translate-shell
 ttf-iosevka
+ttf-roboto
 tuxi-git
 ueberzug
 unclutter
