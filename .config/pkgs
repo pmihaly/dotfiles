@@ -24,7 +24,9 @@ lf-bin
 libnotify
 libqalculate
 libxft-bgra
+lxappearance
 maim
+materia-gtk-theme
 mediainfo
 mpv
 mutt-wizard-git
@@ -49,6 +51,7 @@ python-sortedcontainers
 ranger
 redshift
 ripgrep
+roboto
 shellcheck
 streamlink
 sxhkd
