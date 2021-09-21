@@ -14,7 +14,7 @@ set previewer ~/.config/lf/previewer
 
 # cmds/functions
 cmd open ${{
-    case $(file --mime-type $f -b) in
+    case $(file --mime-type $f -bL) in
 	image/vnd.djvu|application/pdf|application/octet-stream) setsid -f devour zathura $fx >/dev/null 2>&1 ;;
         text/*) $EDITOR $fx;;
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
@@ -88,6 +88,17 @@ cmd searchpdfs ${{
         | xargs -I{} devour zathura "{}"
 }}
 
+cmd createlinktodocs ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+    printf "$fx"
+
+    echo "$fx" | while IFS= read -r x; do
+		eval ln -sr \"$x\" \"$XDG_DOCUMENTS_DIR\"
+	done
+
+}}
+
 
 
 
@@ -102,6 +113,7 @@ map C copyto
 map M moveto
 map n push :mkdir<space>
 map t push $touch<space>
+map L createlinktodocs
 map <c-r> reload
 map <c-s> set hidden!
 map <enter> open
