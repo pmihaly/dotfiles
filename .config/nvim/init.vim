@@ -80,6 +80,10 @@ endif
     map <leader>ic :-1r!curl -s http://whatthecommit.com/index.txt<CR>
     map <leader>iq :-1r!pandoc https://dailystoic.pappmihaly.com --to gfm -o /dev/stdout<CR>
 
+" Opening links with ~/.local/bin/linkhandler script
+    map <leader><CR> :execute 'silent! !linkhandler "<cfile>" &> /dev/null &' <bar> redraw! <CR>
+
+" plug commands
     map <leader>pi :PlugInstall<CR>
     map <leader>pc :PlugClean<CR>
     map <leader>pud :PlugUpdate<CR>
