@@ -76,6 +76,10 @@ endif
     map <leader>cst :!devour sent "%"<CR>
     map <leader>cf :!prettier -w "%"<CR>
 
+" Pascal notetaking snippets
+    inoremap <c-i>pc <CR>```pascal<CR><CR>```<ESC>ki
+    inoremap <c-i>bt ``<ESC>i
+
 " Latex math snippets
     inoremap <c-i>su \sum_{i=0}^{}<ESC>i
     inoremap <c-i>fr \frac{}{}<ESC>ba
