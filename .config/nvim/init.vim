@@ -76,7 +76,29 @@ endif
     map <leader>cst :!devour sent "%"<CR>
     map <leader>cf :!prettier -w "%"<CR>
 
-" insertion
+" Latex math snippets
+    inoremap <c-i>su \sum_{i=0}^{}<ESC>i
+    inoremap <c-i>fr \frac{}{}<ESC>ba
+    inoremap <c-i>fo \forall  : <ESC>bhi
+    inoremap <c-i>mul \cdot
+
+    inoremap <c-i>ge \geq
+    inoremap <c-i>le \leq
+
+    inoremap <c-i>ho ^{}<ESC>i
+    inoremap <c-i>un _{}<ESC>i
+
+    inoremap <c-i>bb \mathbb{}<ESC>i
+    inoremap <c-i>bbn \mathbb{N}
+    inoremap <c-i>in \in
+    inoremap <c-i>inn  \in \mathbb{N}
+
+    inoremap <c-i>ma $$<ESC>i
+    inoremap <c-i>mu <CR>(@) $$$$<ESC>hi
+    inoremap <c-i>mua <CR>(@) $$\begin{aligned}  \end{aligned}$$<ESC>Bhi
+
+
+" insertion from shell
     map <leader>ic :-1r!curl -s http://whatthecommit.com/index.txt<CR>
     map <leader>iq :-1r!pandoc https://dailystoic.pappmihaly.com --to gfm -o /dev/stdout<CR>
 
