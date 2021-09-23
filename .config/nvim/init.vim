@@ -85,9 +85,13 @@ endif
     inoremap <c-i>fr \frac{}{}<ESC>ba
     inoremap <c-i>fo \forall  : <ESC>bhi
     inoremap <c-i>mul \cdot
+    inoremap <c-i>... \dots
 
     inoremap <c-i>ge \geq
     inoremap <c-i>le \leq
+
+    inoremap <c-i>ra \rightarrow
+    inoremap <c-i>la \leftarrow
 
     inoremap <c-i>ho ^{}<ESC>i
     inoremap <c-i>un _{}<ESC>i
