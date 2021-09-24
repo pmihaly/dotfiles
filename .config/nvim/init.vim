@@ -68,6 +68,7 @@ endif
     " conver with debugging
     map <leader>cpd :w \| Spawn [ -e "%.pdf" ] && (pandoc --pdf-engine=xelatex "%" -o "%.pdf" & pidof zathura \|\| zathura "%.pdf") \|\| (pandoc --pdf-engine=xelatex "%" -o "%.pdf" && pidof zathura \|\| zathura "%.pdf") <CR>
     " convert through groff
+    map <leader>cpo :Spawn! zathura "%.pdf"<CR>
     map <leader>cgp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
     map <leader>cpp :w \| !fpc -o"%.out" "%" && ./%.out<CR>
@@ -75,6 +76,10 @@ endif
     map <leader>csl :Spawn sudo make install<CR>
     map <leader>cst :!devour sent "%"<CR>
     map <leader>cf :!prettier -w "%"<CR>
+
+" Markdown snippets
+
+    inoremap <c-i>li []()<ESC>ba
 
 " Pascal notetaking snippets
     inoremap <c-i>pc <CR>```pascal<CR><CR>```<ESC>ki
@@ -97,7 +102,6 @@ endif
     inoremap <c-i>un _{}<ESC>i
 
     inoremap <c-i>bb \mathbb{}<ESC>i
-    inoremap <c-i>bbn \mathbb{N}
     inoremap <c-i>in \in
     inoremap <c-i>inn  \in \mathbb{N}
 
