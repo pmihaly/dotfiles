@@ -10,8 +10,11 @@ super + e
     mw -Y & $TERMINAL -e neomutt
 
 # content consooming
-super + {n, y, Y, J, m}
-    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, ytfzf -ltd, jftui, linkhandler "$(xclip -o)"}
+super + {n, y, Y, J}
+    $TERMINAL -e {newsboat -c ~/sync/newsboat-cache, ytfzf -lt, ytfzf -ltd, jftui}
+
+super + m
+    ~/.local/bin/linkhandler "$(xclip -o)"
 
 # dotfiles obsession
 super + {c, s}
