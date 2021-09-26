@@ -137,7 +137,8 @@ tm() {
 
 # curl websites shortcut
 alias \
-    weather="curl wttr.in"
+    weather="curl wttr.in" \
+    dailystoic="pandoc https://dailystoic.pappmihaly.com --to gfm -o /dev/stdout | glow -"
 
 cheat() {
     curl "cheat.sh/$*"
