@@ -64,11 +64,12 @@ endif
 " compliation/formatting
     map <leader>cm :!markmap "%"<CR>
     " convert through latex asynchronously if possible
-    map <leader>cp :w \| Spawn! [ -e "%.pdf" ] && (pandoc --pdf-engine=xelatex "%" -o "%.pdf" & pidof zathura \|\| zathura "%.pdf") \|\| (pandoc --pdf-engine=xelatex "%" -o "%.pdf" && pidof zathura \|\| zathura "%.pdf") <CR>
-    " conver with debugging
-    map <leader>cpd :w \| Spawn [ -e "%.pdf" ] && (pandoc --pdf-engine=xelatex "%" -o "%.pdf" & pidof zathura \|\| zathura "%.pdf") \|\| (pandoc --pdf-engine=xelatex "%" -o "%.pdf" && pidof zathura \|\| zathura "%.pdf") <CR>
-    " convert through groff
+    map <leader>cp :w \| Spawn! pandoc --pdf-engine=xelatex "%" -o "%.pdf"<CR>
+    " convert with "debugging"
+    map <leader>cpd :w \| Spawn pandoc --pdf-engine=xelatex "%" -o "%.pdf"<CR>
+    " open compiled pdf
     map <leader>cpo :Spawn! zathura "%.pdf"<CR>
+    " convert through groff
     map <leader>cgp :!pandoc -t ms "%" -o "%.pdf"<CR>
     map <leader>cc :w \| !gcc -lm "%" && ./a.out<CR>
     map <leader>cpp :w \| !fpc -o"%.out" "%" && ./%.out<CR>
@@ -77,9 +78,12 @@ endif
     map <leader>cst :!devour sent "%"<CR>
     map <leader>cf :!prettier -w "%"<CR>
 
+" Pandoc latex frontmatter template
+    inoremap <c-i>pa ---<CR>title: DOKUMENTUMCÍM<CR>author: "Papp Mihály"<CR>lang: hu-HU<CR>colorlinks: true<CR>toc: true<CR>numbersections: true<CR>autoEqnLabels: true<CR>header-includes:<CR>- \usepackage{framed}<CR>- \usepackage{xcolor}<CR>- \let\oldquote=\quote<CR>- \let\endoldquote=\endquote<CR>- \colorlet{shadecolor}{orange!15}<CR>- \renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}<CR>---<CR><ESC>15kfDC
+
 " Markdown snippets
 
-    inoremap <c-i>li []()<ESC>ba
+    inoremap <c-i>lip []()<ESC>hpF[a
 
 " Pascal notetaking snippets
     inoremap <c-i>pc <CR>```pascal<CR><CR>```<ESC>ki
