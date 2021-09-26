@@ -110,7 +110,7 @@ endif
     inoremap <c-i>inn  \in \mathbb{N}
 
     inoremap <c-i>ma $$<ESC>i
-    inoremap <c-i>mu <CR>(@) $$$$<ESC>hi
+    inoremap <c-i>mus <CR>(@) $$$$<ESC>hi
     inoremap <c-i>mua <CR>(@) $$\begin{aligned}  \end{aligned}$$<ESC>Bhi
 
 
