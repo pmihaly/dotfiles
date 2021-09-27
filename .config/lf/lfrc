@@ -99,9 +99,6 @@ cmd createlinktodocs ${{
 
 }}
 
-
-
-
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map g $lf -remote "send $id cd $(sed 's/\$HOME/~/g' ~/.config/bookmark-dirs | fzf)"
@@ -119,6 +116,7 @@ map <c-s> set hidden!
 map <enter> open
 map x $$f
 map X !$f
+map Y $echo "$f" | sed 's/ /\\ /g' | xclip -sel clip
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
