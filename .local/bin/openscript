@@ -1,4 +1,4 @@
 #!/bin/sh
 
-file_to_edit="$(ls -d ~/.local/bin/* | rofi -dmenu  | cut -d' ' -f2-)"
+file_to_edit="$(ls -d ~/.local/bin/* | rofi -dmenu -p "script"  | cut -d' ' -f2-)"
 [ "x`printf '%s' "$file_to_edit" | tr -d "$IFS"`" = x ] || (echo "$file_to_edit" | xargs -I {} setsid -f $TERMINAL -e $EDITOR {}) && exit 0

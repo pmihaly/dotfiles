@@ -1,5 +1,5 @@
 #!/bin/sh
 
 
-file_to_edit="$(rofi -dmenu < ~/.config/bookmark-configs | cut -d' ' -f2-)"
+file_to_edit="$(rofi -dmenu -p "config file" < ~/.config/bookmark-configs | cut -d' ' -f2-)"
 [ "x`printf '%s' "$file_to_edit" | tr -d "$IFS"`" = x ] || (echo "$HOME/$file_to_edit" | xargs -I {} setsid -f $TERMINAL -e $EDITOR {}) && exit 0
