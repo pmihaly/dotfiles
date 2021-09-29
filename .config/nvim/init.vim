@@ -295,7 +295,8 @@ endif
 	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 
 " sxhkd
-    autocmd BufWritePost sxhkdrc !killall -q sxhkd; sxhkd &
+    " autocmd BufWritePost sxhkdrc !killall -q sxhkd; sxhkd &
+    autocmd BufWritePost sxhkdrc !kill -10 $(pidof sxhkd) &
 
 " wal templates
     autocmd BufWritePost *wal/templates/* !wal -c;wal -R;wal -R

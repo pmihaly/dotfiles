@@ -9,7 +9,6 @@ picom -b &
 slstatus &
 dunst &
 sxhkd &
-st & # starting a terminal instance in order to sxhkd to work
 shopt -u -o history &
 eval "$(ssh-agent -s)" &
 unclutter 3 &
