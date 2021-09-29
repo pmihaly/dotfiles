@@ -1,3 +1,0 @@
-#!/bin/sh
-
-fzf --print-query --no-info --prompt "Google search> " < /dev/null | tuxi -u -l LANG_hu_HU ; read lmao

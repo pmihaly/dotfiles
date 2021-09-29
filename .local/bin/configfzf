@@ -1,5 +1,0 @@
-#!/bin/sh
-
-fzf < ~/.config/bookmark-configs |
-    cut -d" " -f2- |
-    xargs -I{} sh -c "$EDITOR $HOME/{}"

@@ -12,6 +12,7 @@
 .config/nvim/init.vim
 .config/picom/picom.conf
 .config/pkgs
+.config/rofi/config.rasi
 .config/sc-im/scimrc
 .config/slock/config.h
 .config/slstatus/config.h
@@ -19,6 +20,7 @@
 .config/sxhkd/sxhkdrc
 .config/user-dirs.dirs
 .config/wal/templates/dunstrc
+.config/wal/templates/rofi.rasi
 .config/wal/templates/zathurarc
 .config/ytfzf/conf.sh
 .config/zsh/.zshrc

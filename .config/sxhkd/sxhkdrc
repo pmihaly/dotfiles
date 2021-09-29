@@ -1,10 +1,13 @@
 # gui programs
-super + {w, i, C, t}
-    {$BROWSER, dmenuunicode, dmenuqalc, dmenutrans}
+super + {w, i, C, t, d}
+    {$BROWSER, dmenuunicode, dmenuqalc, dmenutrans, rofi -show drun}
 
 # terminal programs
-super + {a, r, v, o, g, S}
-    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex, projectfzf, tuxifzf, streamfzf}
+super + {a, r, v}
+    $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex}
+
+super + S
+    rofi -show ssh
 
 super + e
     mw -Y & $TERMINAL -e neomutt
@@ -18,7 +21,7 @@ super + m
 
 # dotfiles obsession
 super + {c, s}
-    $TERMINAL -e {configfzf, scriptfzf}
+    {openconfig, openscript}
 
 # system
 super + {W, x}

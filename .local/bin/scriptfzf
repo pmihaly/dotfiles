@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dirfzf .local/bin

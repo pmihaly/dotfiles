@@ -1,5 +1,0 @@
-#!/bin/sh
-
-find $1 -mindepth 1 -maxdepth 1 |
-    fzf |
-    xargs -I{} sh -c "$EDITOR {}"

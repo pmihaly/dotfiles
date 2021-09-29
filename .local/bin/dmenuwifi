@@ -1,21 +1,21 @@
 #!/bin/sh
 
-# connecting to wireless networks from dmenu
-# depends on: dmenu, nmcli, and libnotify (notify-send)
+# connecting to wireless networks from rofi -dmenu
+# depends on: rofi, nmcli, and libnotify (notify-send)
 
 notify-send -t 3000 "📡 Wifi keresése..."
 selected_wifi_ssid="$(
 nmcli --terse d wifi |
     cut -d":" -f8,13,11,14 |
     sed "s/:/ | /g" |
-    dmenu -i -l 30 |
+    rofi -dmenu  |
     cut -d"|" -f1 |
     sed "s/^\s*//g ; s/\s*$//g"
 )"
 
 try_to_connect_with_password() {
     # "nmcli d wifi c" always has a 0 return value...
-    password="$(dmenu -p "$1 jelszava:" </dev/null)"
+    password="$(rofi -dmenu -p "$1 jelszava:" </dev/null)"
     [ -n "$password" ] && nmcli d wifi c "$1" password "$password" && try_to_connect_from_profile "$1"
 }
 
