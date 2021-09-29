@@ -1,6 +1,6 @@
 # gui programs
 super + {w, i, C, t, d}
-    {$BROWSER, dmenuunicode, dmenuqalc, dmenutrans, rofi -show drun}
+    {$BROWSER, dmenuunicode, rofi -show calc -modi calc -no-show-match -no-sort, dmenutrans, rofi -show drun}
 
 # terminal programs
 super + {a, r, v}
