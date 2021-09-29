@@ -83,7 +83,9 @@ endif
 
 " Markdown snippets
 
+    inoremap <c-i>lin []()<ESC>F[a
     inoremap <c-i>lip []()<ESC>hpF[a
+    inoremap <c-i>i ****<ESC>hi
 
 " Pascal notetaking snippets
     inoremap <c-i>pc <CR>```pascal<CR><CR>```<ESC>ki
