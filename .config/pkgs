@@ -52,6 +52,7 @@ python-sortedcontainers
 ranger
 redshift
 ripgrep
+rofi
 shellcheck
 streamlink
 sxhkd
