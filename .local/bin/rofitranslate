@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Translates english and german to system default language
+# When a translation is selected, displays a dictionary definition (in english)
+# Depends on: curl, rofi, and translate-shell
+
+input="$(rofi -dmenu -p "translate")"
+
+[ -n "$input" ] && trans -b -s "en+de" "$input" | sed "/$input/d" | uniq | rofi -dmenu -p "$input" \
+&& curl "dict://dict.org/d:$input" | sed -E "s/.$//g ; /^[0-9]+/d ; /^\./d" | rofi -dmenu -p "$input" 2>/dev/null
