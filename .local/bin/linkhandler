@@ -14,6 +14,8 @@ case "$1" in
 		setsid -f mpv -quiet "$1" >/dev/null 2>&1 ;;
     *youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*)
 		notify-send "📽 MPV started" & setsid -f mpv -quiet "$1" >/dev/null 2>&1 ;;
+    *youtube.com/results?search_query=*|*youtube.com/user*)
+		echo "$1" | sed "s/^.*\.com\///g ; s/results?search_query=//g ; s/\+/ /g ; s/user\///g" | xargs -I{} $TERMINAL -e ytfzf -lt {} 2>&1 ;;
 	*png|*jpg|*jpe|*jpeg|*gif)
 		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && sxiv -a "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
 	*pdf|*cbz|*cbr)
