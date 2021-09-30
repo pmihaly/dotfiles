@@ -6,5 +6,5 @@
 
 input="$(rofi -dmenu -p "translate")"
 
-[ -n "$input" ] && trans -b -s "en+de" "$input" | sed "/$input/d" | uniq | rofi -dmenu -p "$input" \
+[ -n "$input" ] && trans -b -s "en+de" "$input" | sed "/$input/d" | rofi -dmenu -p "$input" \
 && curl "dict://dict.org/d:$input" | sed -E "s/.$//g ; /^[0-9]+/d ; /^\./d" | rofi -dmenu -p "$input" 2>/dev/null
