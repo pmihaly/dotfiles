@@ -12,6 +12,7 @@
 .config/nvim/init.vim
 .config/picom/picom.conf
 .config/pkgs
+.config/qalculate/qalc.cfg
 .config/rofi/config.rasi
 .config/sc-im/scimrc
 .config/slock/config.h
