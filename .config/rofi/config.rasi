@@ -1,7 +1,7 @@
 configuration {
 	modi: "drun,ssh";
 	font: "iosevka extended 12";
-    monitor: "-4";
+	m: "primary";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -36,7 +36,6 @@ configuration {
 	combi-modi: "window,drun,ssh";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
-/*	m: "-5";*/
 /*	filter: ;*/
 /*	dpi: -1;*/
 /*	threads: 0;*/
