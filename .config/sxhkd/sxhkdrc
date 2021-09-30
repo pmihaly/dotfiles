@@ -1,6 +1,6 @@
 # gui programs
-super + {w, i, C, t, d, S}
-    {$BROWSER, dmenuunicode, rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history, rofitranslate, rofi -show drun, rofi -show ssh}
+super + {w, i, C, t, d, S, M}
+    {$BROWSER, dmenuunicode, rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history, rofitranslate, rofi -show drun, rofi -show ssh, rofimusic}
 
 # terminal programs
 super + {a, r, v}
