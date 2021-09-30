@@ -74,7 +74,7 @@ cmd convimagestopdf ${{
 	set -f
 	printf "Convert file(s) to (.pdf will be added): "
     read ans
-    img2pdf $fx | ocrmypdf -l hun+eng+deu - "$ans.pdf"
+    img2pdf $fx | ocrmypdf -l hun+deu+eng - "$ans.pdf"
 }}
 
 
