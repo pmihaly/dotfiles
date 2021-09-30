@@ -1,13 +1,10 @@
 # gui programs
-super + {w, i, C, t, d}
-    {$BROWSER, dmenuunicode, rofi -show calc -modi calc -no-show-match -no-sort, rofitranslate, rofi -show drun}
+super + {w, i, C, t, d, S}
+    {$BROWSER, dmenuunicode, rofi -show calc -modi calc -no-show-match -no-sort -no-persist-history, rofitranslate, rofi -show drun, rofi -show ssh}
 
 # terminal programs
 super + {a, r, v}
     $TERMINAL -e {pulsemixer, $FILEBROWSER, $EDITOR -c VimwikiIndex}
-
-super + S
-    rofi -show ssh
 
 super + e
     mw -Y & $TERMINAL -e neomutt
