@@ -21,8 +21,8 @@ super + {c, s}
     {openconfig, openscript}
 
 # system
-super + {W, x}
-    {dmenuwifi, slock}
+super + {W, x, T}
+    {dmenuwifi, slock, killall picom && picom -b}
 
 # screenshot
 super + {p, P}
