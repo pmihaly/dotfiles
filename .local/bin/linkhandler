@@ -7,7 +7,8 @@
 # otherwise it opens link in browser.
 
 # If no url given. Opens browser. For using script as $BROWSER.
-[ -z "$1" ] && { "$BROWSER"; exit; }
+# [ -z "$1" ] && { "$BROWSER"; exit; }
+[ -z "$1" ] && { exit; }
 
 case "$1" in
 	*mkv|*webm|*mp4)
