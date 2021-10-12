@@ -115,6 +115,8 @@ endif
     inoremap <c-i>mus <CR>(@) $$$$<ESC>hi
     inoremap <c-i>mua <CR>(@) $$\begin{aligned}  \end{aligned}$$<ESC>Bhi
 
+    inoremap <c-i>mat \begin{pmatrix}  \end{pmatrix}<ESC>Bhi
+
 
 " insertion from shell
     map <leader>ic :-1r!curl -s http://whatthecommit.com/index.txt<CR>
